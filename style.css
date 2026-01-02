@@ -33,16 +33,20 @@ html {
     font-size: 16px;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+    overflow-x: hidden;
+    height: 100%;
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
-    background: linear-gradient(180deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    background: #fff;
     color: #333;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
 }
 
 /* 子页面时防止body滚动 */
@@ -64,6 +68,8 @@ body.has-inner-page {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+    position: relative;
 }
 
 /* 子页面固定高度布局 */
@@ -104,6 +110,17 @@ body.has-inner-page {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    position: relative;
+    min-height: 0;
+    background: #fff;
+}
+
+/* 确保首页内容不会超出底部蓝色条 */
+.page:not(.inner-page) .page-content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
 }
 
 /* ============================================
@@ -178,9 +195,9 @@ body.has-inner-page {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 40px 20px 50px;
+    padding: 30px 20px 35px;
     position: relative;
-    min-height: 35vh;
+    min-height: 25vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -415,7 +432,8 @@ body.has-inner-page {
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
     padding: 24px 20px;
-    background: transparent;
+    background: var(--bg-gradient-start);
+    flex-shrink: 0;
 }
 
 .grid-item {
@@ -475,6 +493,8 @@ body.has-inner-page {
     justify-content: center;
     width: 80px;
     height: 80px;
+    min-width: 80px;
+    min-height: 80px;
     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
     border-radius: var(--radius-medium);
     box-shadow: 
@@ -484,6 +504,8 @@ body.has-inner-page {
     position: relative;
     z-index: 1;
     transition: all 0.3s;
+    line-height: 1;
+    flex-shrink: 0;
 }
 
 .grid-item:hover .grid-item-icon {
@@ -808,7 +830,10 @@ body.has-inner-page {
     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
     height: 80px;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 0;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
 }
 
 /* ============================================
@@ -883,7 +908,7 @@ body.has-inner-page {
     background-size: 150% auto;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 20px 20px 40px;
+    padding: 16px 20px 28px;
     position: relative;
     width: 100%;
     display: flex;
@@ -891,7 +916,7 @@ body.has-inner-page {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    min-height: 200px;
+    min-height: 140px;
     overflow: hidden;
 }
 
@@ -1120,8 +1145,8 @@ body.has-inner-page {
    ============================================ */
 @media (max-width: 767px) {
     .header-banner {
-        min-height: 40vh;
-        padding: 30px 16px 40px;
+        min-height: 22vh;
+        padding: 24px 16px 28px;
     }
     
     .banner-title-image {
@@ -1150,7 +1175,11 @@ body.has-inner-page {
     .grid-item-icon {
         width: 70px;
         height: 70px;
+        min-width: 70px;
+        min-height: 70px;
         font-size: 32px;
+        line-height: 1;
+        flex-shrink: 0;
     }
     
     .grid-item-title {
@@ -1201,8 +1230,8 @@ body.has-inner-page {
     
     /* 子页面头部 Banner 移动端优化 */
     .subpage-header-banner {
-        padding: 16px 16px 32px;
-        min-height: 180px;
+        padding: 12px 16px 24px;
+        min-height: 120px;
     }
     
     .subpage-logo {
