@@ -4,7 +4,7 @@
 
 // 政策问答分类列表
 const qaCategories = [
-    { id: 'employment', name: '就业创业' },
+    { id: 'employment', name: '返乡创业' },
     { id: 'social-security', name: '社保服务' },
     { id: 'rights-protection', name: '维权服务' },
     { id: 'children-education', name: '子女入学' },
@@ -21,7 +21,7 @@ const qaItems = [
         id: 'qa-employment-1',
         categoryId: 'employment',
         question: '如何获取内江最新的招聘求职信息？',
-        answer: `关注“内江市人社局”微信公众号，“甜城用工580”微信小程序，四川（内江）公共招聘网http：//nj.sc9（一）org.cn就能获取最新的招聘求职信息。`
+        answer: `关注"内江市人社局"微信公众号，"甜城用工580"微信小程序，四川（内江）公共招聘网http://nj.sc9.org.cn就能获取最新的招聘求职信息。`
     },
     {
         id: 'qa-employment-2',
@@ -69,7 +69,7 @@ const qaItems = [
         id: 'qa-employment-9',
         categoryId: 'employment',
         question: '哪些人可以安置公益性岗位？补贴标准和补贴时限是多少？',
-        answer: `具有我市户籍，在法定劳动年龄内，有一定劳动能力和就业愿望且处于失业状态的城乡就业困难人员（含原会人口）可安置公益性岗位。公益性岗位补贴标准：城镇2200元/人/月，乡村（社区）500元/人/月。补贴时限最长补超过3年。`
+        answer: `具有我市户籍，在法定劳动年龄内，有一定劳动能力和就业愿望且处于失业状态的城乡就业困难人员（含原户籍人口）可安置公益性岗位。公益性岗位补贴标准：城镇2200元/人/月，乡村（社区）500元/人/月。补贴时限最长不超过3年。`
     },
     {
         id: 'qa-employment-10',
@@ -135,7 +135,7 @@ const qaItems = [
         id: 'qa-employment-19',
         categoryId: 'employment',
         question: '农民工如何申领失业保险金？',
-        answer: `符合条件的失业农民工可登陆“四川省就业创业网上服务大厅或微信公众号“四川e就业”进行申领，也可携带本人身份证或者社保卡到参保地失业保险经办机构进行申领。 （1）网上申领。网站平台办理：四川省就业创业网上服务大厅（网址：htp：//119.6.8（四）89/），点击“个人业务”，再点击“失业待遇服务”根据需要选择相应业务。 微信办理：搜索公众号“四川e就业”，实名绑定本人身份证，点击“领补贴”或“微申报”申领失业保险待遇。 （2）现场申领。可到参保地失业保险经办机构进行现场申领。`
+        answer: `符合条件的失业农民工可登陆"四川省就业创业网上服务大厅"或微信公众号"四川e就业"进行申领，也可携带本人身份证或者社保卡到参保地失业保险经办机构进行申领。 （1）网上申领。网站平台办理：四川省就业创业网上服务大厅（网址：http://119.6.8.89/），点击"个人业务"，再点击"失业待遇服务"根据需要选择相应业务。 微信办理：搜索公众号"四川e就业"，实名绑定本人身份证，点击"领补贴"或"微申报"申领失业保险待遇。 （2）现场申领。可到参保地失业保险经办机构进行现场申领。`
     },
     {
         id: 'qa-employment-20',
@@ -346,13 +346,13 @@ const qaItems = [
         id: 'qa-social-security-48',
         categoryId: 'social-security',
         question: '农民工怎样办理企业职工基本养老保险跨省转移业务？',
-        answer: `个人跨统筹地区就业的，其基本养老保险关系随本人转移，缴费年限累计计算。 （一）从省外转移到我省的。可登录国家社会保险公共服务平台（http：//si.12333.gov.cn）发“掌上12333”→选择“基本养老保险关系转移网上申请”功能→填写转移申请信息→通过人脸识别认证本人身份后，发起转移业务申请。 （二）从我省转移到外省的。可直接登录国家社会保险公共服务平台（http：//si.12333.gov.cn）或“掌上12333”发起转出业务申请。 （三）查询转移进度。如需知晓转移进度，农民工可登录国家社会保险公共服务平台（http：//si.12333.gov.cn）或“掌上12333”→选择“关系转移”功能→社保转移申请审核结果查询/社保转移进度查询→查询网上申请审核结果信息，以及查询后续转移进度。`
+        answer: `个人跨统筹地区就业的，其基本养老保险关系随本人转移，缴费年限累计计算。 （一）从省外转移到我省的。可登录国家社会保险公共服务平台（http://si.12333.gov.cn）或"掌上12333"→选择"基本养老保险关系转移网上申请"功能→填写转移申请信息→通过人脸识别认证本人身份后，发起转移业务申请。 （二）从我省转移到外省的。可直接登录国家社会保险公共服务平台（http://si.12333.gov.cn）或"掌上12333"发起转出业务申请。 （三）查询转移进度。如需知晓转移进度，农民工可登录国家社会保险公共服务平台（http://si.12333.gov.cn）或"掌上12333"→选择"关系转移"功能→社保转移申请审核结果查询/社保转移进度查询→查询网上申请审核结果信息，以及查询后续转移进度。`
     },
     {
         id: 'qa-social-security-49',
         categoryId: 'social-security',
         question: '农民工在多个务工地参保，最后应在哪里领退休金？',
-        answer: `（一）到达法定退休年龄时，基本养老保险关系在户籍地的，在户籍地办理退休手续； （二）到达法定退休年龄时，基本养老保险关系不在户籍地的，且基本养老保险关系所在地累计缴费满10年，在该地办理退休退休手续； （三）到达法定退休年龄时，基本养老保险关系不在户籍地的，且基本养老保险关系所在地累计缴费不满10年，跨省流动就业中，所有参保地内（以省为单位）无一处累计缴费满10年，在户籍地办理手续； （四）到达法定退休年龄时，基本养老保险关系不在户籍地的，且基本养老保险关系所在地累计缴费不满10年，跨省流动就业中，之前的参保地内（以省为单位）有累计缴费满10年，在上一个累计缴费满10年的参保地办理手续。`
+        answer: `（一）到达法定退休年龄时，基本养老保险关系在户籍地的，在户籍地办理退休手续； （二）到达法定退休年龄时，基本养老保险关系不在户籍地的，且基本养老保险关系所在地累计缴费满10年，在该地办理退休手续； （三）到达法定退休年龄时，基本养老保险关系不在户籍地的，且基本养老保险关系所在地累计缴费不满10年，跨省流动就业中，所有参保地内（以省为单位）无一处累计缴费满10年，在户籍地办理手续； （四）到达法定退休年龄时，基本养老保险关系不在户籍地的，且基本养老保险关系所在地累计缴费不满10年，跨省流动就业中，之前的参保地内（以省为单位）有累计缴费满10年，在上一个累计缴费满10年的参保地办理手续。`
     },
     {
         id: 'qa-social-security-50',
@@ -364,7 +364,7 @@ const qaItems = [
         id: 'qa-social-security-51',
         categoryId: 'social-security',
         question: '养老保险资格认证多久认证一次？如何认证？',
-        answer: `一年一次。领取养老保险待遇的人员可通过登录国家社会保险公共服务平台（http：//si.12333.gov.cn）或“掌上12333”手机APP、四川人社APP等方式进行人脸识别自助认证。 社保经办机构也会通过数据比对、社会化服务方式等开展认证，高龄老人和行动不便的特殊群体可以提出上门认证申请，社保经办机构工作人员会提供上门认证服务。`
+        answer: `一年一次。领取养老保险待遇的人员可通过登录国家社会保险公共服务平台（http://si.12333.gov.cn）或"掌上12333"手机APP、四川人社APP等方式进行人脸识别自助认证。 社保经办机构也会通过数据比对、社会化服务方式等开展认证，高龄老人和行动不便的特殊群体可以提出上门认证申请，社保经办机构工作人员会提供上门认证服务。`
     },
     {
         id: 'qa-social-security-52',
@@ -721,7 +721,7 @@ const qaItems = [
         id: 'qa-social-security-95',
         categoryId: 'social-security',
         question: '职工基本医疗保险个人账户家庭共济如何办理？',
-        answer: `职工医保个人账户资金可以给家庭成员绑定使用，通过手机下载医保服务平台、微信、支付宝APP搜索“医保亲情账户”，根据指示激活并绑定家庭成员，可使用个人账户为内江市近亲属（含配偶、父母、子女、兄弟姐妹、祖父母、外祖父母、孙子女、外孙子女）代缴城乡居民医保费；还可为已参保的近亲属支付在定点医院和药店就医购药的个人自付费用。    问：职工基本医疗保险普通门诊统筹待遇的报销比例和年度限额分别是多少？    答：符合职工医保待遇享受条件的参保人员，在定点医疗机构、符合条件的定点零售药店发生的政策范围内普通门诊费用、购药费用纳入门诊统筹保障。符合条件的定点零售药店报销比例，在职人员50%，退休人员60%。    职工门诊统筹当年度结余部分不能跨年使用。 人员类别 起付线 定点医院报销比列 年度支付限额 在职人员 200元 三级 50% 800元/年   二级及以下 60%  退休人员 150元 三级 60% 1000元/年   二级及以下 70%`
+        answer: `职工医保个人账户资金可以给家庭成员绑定使用，通过手机下载医保服务平台、微信、支付宝APP搜索"医保亲情账户"，根据指示激活并绑定家庭成员，可使用个人账户为内江市近亲属（含配偶、父母、子女、兄弟姐妹、祖父母、外祖父母、孙子女、外孙子女）代缴城乡居民医保费；还可为已参保的近亲属支付在定点医院和药店就医购药的个人自付费用。    问：职工基本医疗保险普通门诊统筹待遇的报销比例和年度限额分别是多少？    答：符合职工医保待遇享受条件的参保人员，在定点医疗机构、符合条件的定点零售药店发生的政策范围内普通门诊费用、购药费用纳入门诊统筹保障。符合条件的定点零售药店报销比例，在职人员50%，退休人员60%。    职工门诊统筹当年度结余部分不能跨年使用。 人员类别 起付线 定点医院报销比例 年度支付限额 在职人员 200元 三级 50% 800元/年   二级及以下 60%  退休人员 150元 三级 60% 1000元/年   二级及以下 70%`
     },
     {
         id: 'qa-social-security-96',
@@ -1011,7 +1011,7 @@ const qaItems = [
         id: 'qa-children-education-135',
         categoryId: 'children-education',
         question: '内江有哪些阶段招生政策？',
-        answer: `（一）义务教育：实行免试就近入学和公民同招政策，严格落实“五个严禁”，即严禁通过文化课考试、测试等方式选拔学生，严禁收取学生个人简历或视频音频等个人展示材料，严禁以学科竞赛、考试证书、荣誉证书、培训证明等作为录取依据，严禁以“校园开放日”等名义进行违规招生宣传或考察学生、家长，严禁义务教育学校违规跨区域招生，不得跨设区的市招生。 （二）普通高中：严格落实教育部“十项严禁”，特别是：严禁提前组织招生，变相“掐尖”选生源；严禁学校擅自招收已被其他学校录取的学生；严禁为违规跨区域招收的学生和违规转学学生办理学籍转接。内江市所有公、民办普高学校招生工作均通过“内江市基础教育招生入学管理平台”（网址：http：//www.njszk.cn/）实行，普高招生以中考学业成绩和志愿为主要依据，统一实施招生录取。`
+        answer: `（一）义务教育：实行免试就近入学和公民同招政策，严格落实"五个严禁"，即严禁通过文化课考试、测试等方式选拔学生，严禁收取学生个人简历或视频音频等个人展示材料，严禁以学科竞赛、考试证书、荣誉证书、培训证明等作为录取依据，严禁以"校园开放日"等名义进行违规招生宣传或考察学生、家长，严禁义务教育学校违规跨区域招生，不得跨设区的市招生。 （二）普通高中：严格落实教育部"十项严禁"，特别是：严禁提前组织招生，变相"掐尖"选生源；严禁学校擅自招收已被其他学校录取的学生；严禁为违规跨区域招收的学生和违规转学学生办理学籍转接。内江市所有公、民办普高学校招生工作均通过"内江市基础教育招生入学管理平台"（网址：http://www.njszk.cn/）实行，普高招生以中考学业成绩和志愿为主要依据，统一实施招生录取。`
     },
     {
         id: 'qa-children-education-136',
@@ -1044,7 +1044,7 @@ const qaItems = [
         id: 'qa-children-education-138',
         categoryId: 'children-education',
         question: '孩子上大学，想了解国家助学贷款政策？',
-        answer: `国家助学贷款是由政府主导，金融机构向高校家庭经济困难学生提供的信用贷款，优先用于支付在校期间的学费和住宿费，超出部分可用于弥补日常生活费。全日制普通本专科学生（含预科、高职、第二学士学位）每人每年最高不超过20000元，在校期间贷款利息由财政全额补贴，毕业后的利息由学生和家长（或其他法定监护人）负担，并按约定偿还本金。贷款期限为学制加15年，最长不超过22年。助学贷款利率按照同期同档次贷款市场报价利率（LPR）减70个基点执行（LPR5Y-0.7%）。国家助学贷款分为生源地信用助学贷款和校园地国家助学贷款，有贷款需求的家庭经济困难学生可向户籍地县（市、区）教育主管部门学生资助管理中心咨询办理生源地信用助学贷款，或向高校学生资助管理中心咨询办理校园地国家助学贷款。同一学年内，有贷款需求的家庭经济困难学生只能选择申请办理其中一种类型的国家助学贷款。生源地信用助学贷款办理时间为6—10月，校园地国家助学贷款办理时间为9—10月。生源地信用助学贷款向户籍所在县（市、区、旗）的学生资助管理部门咨询办理。校园地国家助学贷款向就读高校学生资助管理部门咨询办理。（提示：同一学年内，不能同时申请生源地信用助学贷款和校园地国家助学贷款。） 统一咨询电话： 内江市教育基金和学生资助中心0832-2048090（工作日） 内江市市中区学生资助中心0832-2053307 内江市东兴区学生资助中心0832-2271320 威运县学生资助服务中心0832-8233222 资中县学生资助中心0832-5514577 隆昌市学生资助和学校后勤指导中心0832-3939489 内江市高新区社会事务服务中心0832-6105046 内江市经开区社事局0832-2070296`
+        answer: `国家助学贷款是由政府主导，金融机构向高校家庭经济困难学生提供的信用贷款，优先用于支付在校期间的学费和住宿费，超出部分可用于弥补日常生活费。全日制普通本专科学生（含预科、高职、第二学士学位）每人每年最高不超过20000元，在校期间贷款利息由财政全额补贴，毕业后的利息由学生和家长（或其他法定监护人）负担，并按约定偿还本金。贷款期限为学制加15年，最长不超过22年。助学贷款利率按照同期同档次贷款市场报价利率（LPR）减70个基点执行（LPR5Y-0.7%）。国家助学贷款分为生源地信用助学贷款和校园地国家助学贷款，有贷款需求的家庭经济困难学生可向户籍地县（市、区）教育主管部门学生资助管理中心咨询办理生源地信用助学贷款，或向高校学生资助管理中心咨询办理校园地国家助学贷款。同一学年内，有贷款需求的家庭经济困难学生只能选择申请办理其中一种类型的国家助学贷款。生源地信用助学贷款办理时间为6—10月，校园地国家助学贷款办理时间为9—10月。生源地信用助学贷款向户籍所在县（市、区、旗）的学生资助管理部门咨询办理。校园地国家助学贷款向就读高校学生资助管理部门咨询办理。（提示：同一学年内，不能同时申请生源地信用助学贷款和校园地国家助学贷款。） 统一咨询电话： 内江市教育基金和学生资助中心0832-2048090（工作日） 内江市市中区学生资助中心0832-2053307 内江市东兴区学生资助中心0832-2271320 威远县学生资助服务中心0832-8233222 资中县学生资助中心0832-5514577 隆昌市学生资助和学校后勤指导中心0832-3939489 内江市高新区社会事务服务中心0832-6105046 内江市经开区社事局0832-2070296`
     },
     {
         id: 'qa-children-education-139',
@@ -1696,26 +1696,38 @@ function render() {
     const [path, ...params] = hash.slice(2).split('/');
 
     app.innerHTML = '';
+    
+    // 清除body的固定定位（如果有）
+    document.body.style.overflow = '';
+    document.body.style.position = '';
 
     if (path === 'home') {
+        document.body.classList.remove('has-inner-page');
         renderHome();
     } else if (path === 'qa') {
+        document.body.classList.add('has-inner-page');
         const categoryId = params[0];
         renderQAList(categoryId);
     } else if (path === 'qa-detail') {
+        document.body.classList.remove('has-inner-page');
         const qaId = params[0];
         renderQADetail(qaId);
     } else if (path === 'collection') {
+        document.body.classList.remove('has-inner-page');
         renderCollectionList();
     } else if (path === 'collection-detail') {
+        document.body.classList.remove('has-inner-page');
         const docId = params[0];
         renderCollectionDetail(docId);
         } else {
+        document.body.classList.remove('has-inner-page');
         renderHome();
     }
 
-    // 滚动到顶部
-    window.scrollTo(0, 0);
+    // 滚动到顶部（仅对非固定高度页面）
+    if (path !== 'qa') {
+        window.scrollTo(0, 0);
+    }
 }
 
 // ============================================
@@ -1725,28 +1737,27 @@ function renderHome() {
     const pageHtml = `
         <div class="page">
             <div class="page-content">
-                <!-- Logo & 服务中心信息 -->
+                <!-- 顶部 Banner（全宽大图 + 叠加文字） -->
                 <div class="header-banner">
-                    <div class="logo-container">
-                        <img src="logo.png" alt="内江市农民工服务保障" class="logo-img">
-                        <div class="logo-text">
-                            <div class="logo-text-main">内江市农民工服务保障</div>
-                            <div class="logo-text-sub">NEIJIANG MIGRANT WORKERS SERVICE GUARANTEE</div>
-                        </div>
+                    <!-- 中间 title.png 图片（替换logo和中文主标题） -->
+                    <div class="banner-title-image-container">
+                        <img src="title.png" alt="内江市农民工服务保障" class="banner-title-image">
                     </div>
+                    
+                    <!-- 中间文字层级 -->
+                    <div class="banner-text-container">
+                        <div class="banner-slogan">用心用情用力 夯实服务保障</div>
+                        <div class="banner-sub-slogan">倾心倾情倾力 深耕返乡创业</div>
+                    </div>
+                    
+                    <div class="photo-credit">摄影：唐明润</div>
                 </div>
 
-                <!-- 宣传标语 -->
-                <div class="campaign-banner">
-                    <div class="campaign-title">用心用情用力  夯实服务保障</div>
-                    <div class="campaign-subtitle">倾心倾情倾力  深耕返乡创业</div>
-                </div>
-
-                <!-- 九宫格入口 -->
+                <!-- 九宫格入口区域（3×3 卡片） -->
                 <div class="grid-container">
                     <a href="#/qa/employment" class="grid-item">
                         <div class="grid-item-icon">💼</div>
-                        <div class="grid-item-title">就业创业</div>
+                        <div class="grid-item-title">返乡创业</div>
                     </a>
                     <a href="#/qa/social-security" class="grid-item">
                         <div class="grid-item-icon">🛡️</div>
@@ -1768,19 +1779,22 @@ function renderHome() {
                         <div class="grid-item-icon">🏠</div>
                         <div class="grid-item-title">住房保障</div>
                     </a>
-                    <a href="#/qa/marriage-fertility" class="grid-item">
-                        <div class="grid-item-icon">👨‍👩‍👧</div>
-                        <div class="grid-item-title">婚姻生育</div>
+                    <a href="#/qa/employment" class="grid-item">
+                        <div class="grid-item-icon">🎯</div>
+                        <div class="grid-item-title">就业培训</div>
                     </a>
-                    <a href="#/qa/welfare-subsidy" class="grid-item">
-                        <div class="grid-item-icon">💰</div>
-                        <div class="grid-item-title">福利补助</div>
+                    <a href="#/qa/social-security" class="grid-item">
+                        <div class="grid-item-icon">🏥</div>
+                        <div class="grid-item-title">医疗健康</div>
                     </a>
                     <a href="返乡下乡创业政策汇编.pdf" target="_blank" class="grid-item">
                         <div class="grid-item-icon">📑</div>
-                        <div class="grid-item-title">政策汇编</div>
+                        <div class="grid-item-title">政策咨询</div>
                     </a>
                 </div>
+                
+                <!-- 底部蓝色Banner -->
+                <div class="footer-banner"></div>
             </div>
         </div>
     `;
@@ -1805,27 +1819,46 @@ function renderQAList(categoryId) {
         const numberMatch = item.id.match(/(\d+)$/);
         const number = numberMatch ? numberMatch[1] : (index + 1);
         return `
-        <a href="#/qa-detail/${item.id}" class="card">
-            <div class="card-question"><span class="question-number">${number}.</span> ${escapeHtml(item.question)}</div>
+        <a href="#/qa-detail/${item.id}" class="qa-card">
+            <span class="qa-number-badge">${number}</span>
+            <div class="qa-question-text">${escapeHtml(item.question)}</div>
+            <span class="qa-chevron">›</span>
         </a>
     `;
     }).join('');
 
     const pageHtml = `
-        <div class="page">
+        <div class="page inner-page">
             <div class="nav-bar">
                 <div class="nav-bar-back" onclick="window.location.hash = '#/home'">←</div>
-                <div class="nav-bar-title">${escapeHtml(category.name)}</div>
+                <div class="nav-bar-title">内江市农民工服务</div>
                 <div class="nav-bar-spacer"></div>
             </div>
 
-            <div class="search-bar">
-                <input type="text" id="search-input" placeholder="搜索问答...">
-                <button onclick="filterQA()">搜索</button>
-            </div>
+            <div class="page-content">
+                <!-- 头部 Banner（带背景图、logo、标题） -->
+                <div class="subpage-header-banner">
+                    <div class="subpage-logo-container">
+                        <img src="logo.png" alt="Logo" class="subpage-logo" onerror="this.style.display='none'">
+                    </div>
+                    <div class="subpage-title-container">
+                        <div class="subpage-main-title">${escapeHtml(category.name)}</div>
+                    </div>
+                </div>
 
-            <div class="card-list" id="qa-list">
-                ${itemsHtml}
+                <!-- 白色卡片容器 -->
+                <div class="subpage-white-card">
+                    <!-- 搜索区 -->
+                    <div class="subpage-search-bar">
+                        <input type="text" id="search-input" placeholder="搜索问答...">
+                        <button onclick="filterQA()">搜索</button>
+                    </div>
+
+                    <!-- 问答列表 -->
+                    <div class="subpage-qa-list" id="qa-list">
+                        ${itemsHtml}
+                    </div>
+                </div>
             </div>
         </div>
     `;
@@ -1845,8 +1878,10 @@ function renderQAList(categoryId) {
                 const numberMatch = item.id.match(/(\d+)$/);
                 const number = numberMatch ? numberMatch[1] : (index + 1);
                 return `
-                <a href="#/qa-detail/${item.id}" class="card">
-                    <div class="card-question"><span class="question-number">${number}.</span> ${escapeHtml(item.question)}</div>
+                <a href="#/qa-detail/${item.id}" class="qa-card">
+                    <span class="qa-number-badge">${number}</span>
+                    <div class="qa-question-text">${escapeHtml(item.question)}</div>
+                    <span class="qa-chevron">›</span>
                 </a>
             `;
             }).join('');
@@ -1880,7 +1915,7 @@ function renderQADetail(qaId) {
                 <div class="nav-bar-spacer"></div>
             </div>
 
-            <div class="qa-detail-container">
+            <div class="qa-detail-container" style="max-height: calc(100vh - 56px); overflow-y: auto; -webkit-overflow-scrolling: touch;">
                 <div class="qa-question-section">
                     <div class="qa-question-label">问题</div>
                     <div class="qa-question-text">${escapeHtml(qa.question)}</div>
