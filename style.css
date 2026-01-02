@@ -45,8 +45,11 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     min-height: 100vh;
+    min-height: 100dvh; /* 动态视口高度，适配移动端浏览器 */
     overflow-x: hidden;
     position: relative;
+    margin: 0;
+    padding: 0;
 }
 
 /* 子页面时防止body滚动 */
@@ -121,6 +124,12 @@ body.has-inner-page {
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-y: contain;
+}
+
+/* 确保页面在移动端不会超出底部 */
+.page:not(.inner-page) {
+    max-height: 100vh;
+    max-height: 100dvh; /* 动态视口高度，适配移动端浏览器 */
 }
 
 /* ============================================
@@ -834,6 +843,8 @@ body.has-inner-page {
     flex-shrink: 0;
     position: relative;
     z-index: 1;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 /* ============================================
@@ -1288,6 +1299,38 @@ body.has-inner-page {
     body.has-inner-page {
         height: 100dvh;
         max-height: 100dvh;
+    }
+    
+    /* 移动端确保页面不会超出底部 */
+    .page:not(.inner-page) {
+        max-height: 100dvh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        overscroll-behavior-y: contain;
+    }
+    
+    .page:not(.inner-page) .page-content {
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-y: contain;
+    }
+    
+    /* 确保footer在底部，无多余空间 */
+    .footer-banner {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    
+    /* 确保页面内容不会超出footer */
+    body {
+        margin: 0;
+        padding: 0;
+        overscroll-behavior-y: contain;
+    }
+    
+    html {
+        overscroll-behavior-y: contain;
     }
 }
 
