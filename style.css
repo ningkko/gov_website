@@ -206,9 +206,12 @@ body.has-inner-page {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* 增加背景图片亮度 */
+    filter: brightness(1.15);
+    -webkit-filter: brightness(1.15);
 }
 
-/* 淡蓝色透明渐变遮罩 */
+/* 淡蓝色透明渐变遮罩 - 调亮背景 */
 .header-banner::before {
     content: '';
     position: absolute;
@@ -216,7 +219,7 @@ body.has-inner-page {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(180deg, rgba(30, 136, 229, 0.5) 0%, rgba(30, 136, 229, 0.2) 100%);
+    background: linear-gradient(180deg, rgba(30, 136, 229, 0.25) 0%, rgba(30, 136, 229, 0.1) 100%);
     z-index: 0;
 }
 
@@ -278,20 +281,32 @@ body.has-inner-page {
 }
 
 .banner-slogan {
-    font-size: 15px;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
-    margin-bottom: 8px;
-    letter-spacing: 0.4px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6), 0 0 4px rgba(0, 0, 0, 0.4);
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 16px;
+    border-radius: 8px;
+    display: inline-block;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
 .banner-sub-slogan {
-    font-size: 15px;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
-    letter-spacing: 0.4px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6), 0 0 4px rgba(0, 0, 0, 0.4);
+    letter-spacing: 0.5px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 16px;
+    border-radius: 8px;
+    display: inline-block;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
 /* 宣传标语（保留原有样式但调整） */
@@ -487,7 +502,7 @@ body.has-inner-page {
     box-shadow: var(--shadow-card);
 }
 
-/* 蓝色胶囊底座 + 3D 图标 */
+/* 蓝色方块底座 + 彩色emoji图标 */
 .grid-item-icon {
     font-size: 36px;
     margin-bottom: 16px;
@@ -501,36 +516,24 @@ body.has-inner-page {
     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
     border-radius: var(--radius-medium);
     box-shadow: 
-        0 4px 12px rgba(30, 136, 229, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.3),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+        0 2px 8px rgba(30, 136, 229, 0.2);
     position: relative;
     z-index: 1;
     transition: all 0.3s;
     line-height: 1;
     flex-shrink: 0;
+    /* 使用文本渲染确保图标清晰 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .grid-item:hover .grid-item-icon {
     transform: scale(1.05) translateY(-2px);
     box-shadow: 
-        0 6px 16px rgba(30, 136, 229, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.4),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+        0 4px 12px rgba(30, 136, 229, 0.3);
 }
 
-/* 图标高光效果 */
-.grid-item-icon::after {
-    content: '';
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    right: 8px;
-    height: 30%;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, transparent 100%);
-    border-radius: var(--radius-medium) var(--radius-medium) 50% 50%;
-    pointer-events: none;
-}
+/* 移除复杂的CSS图标样式，使用简单的Unicode字符 */
 
 .grid-item-title {
     font-size: 15px;
@@ -1165,11 +1168,13 @@ body.has-inner-page {
     }
     
     .banner-slogan {
-        font-size: 14px;
+        font-size: 16px;
+        padding: 6px 12px;
     }
     
     .banner-sub-slogan {
-        font-size: 14px;
+        font-size: 16px;
+        padding: 6px 12px;
     }
     
     .grid-container {
