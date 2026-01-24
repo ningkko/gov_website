@@ -2374,15 +2374,9 @@ function renderHome() {
             <div class="page-content">
                 <!-- 顶部 Banner（全宽大图 + 叠加文字） -->
                 <div class="header-banner">
-                    <!-- 中间 title.png 图片（替换logo和中文主标题） -->
+                    <!-- 中间 home_title.png 图片（替换logo和中文主标题） -->
                     <div class="banner-title-image-container">
-                        <img src="title.png" alt="内江市农民工服务保障" class="banner-title-image">
-                    </div>
-                    
-                    <!-- 中间文字层级 -->
-                    <div class="banner-text-container">
-                        <div class="banner-slogan">用心用情用力 夯实服务保障</div>
-                        <div class="banner-sub-slogan">倾心倾情倾力 深耕返乡创业</div>
+                        <img src="home_title.png" alt="内江市农民工服务保障" class="banner-title-image">
                     </div>
                     
                 </div>

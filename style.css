@@ -194,11 +194,8 @@ body.has-inner-page {
    顶部横幅 Banner（全宽大图 + 叠加文字）
    ============================================ */
 .header-banner {
-    background-image: url('background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 30px 20px 35px;
+    background: none;
+    padding: 0;
     position: relative;
     min-height: 25vh;
     width: 100%;
@@ -206,9 +203,6 @@ body.has-inner-page {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* 增加背景图片亮度 */
-    filter: brightness(1.15);
-    -webkit-filter: brightness(1.15);
 }
 
 /* 淡蓝色透明渐变遮罩 - 调亮背景 */
@@ -219,7 +213,7 @@ body.has-inner-page {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(180deg, rgba(30, 136, 229, 0.25) 0%, rgba(30, 136, 229, 0.1) 100%);
+    background: none;
     z-index: 0;
 }
 
@@ -228,22 +222,24 @@ body.has-inner-page {
     z-index: 1;
 }
 
-/* title.png 图片容器 */
+/* home_title.png 图片容器 */
 .banner-title-image-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     width: 100%;
+    padding: 0;
 }
 
 .banner-title-image {
-    max-width: 90%;
-    max-width: 500px;
+    width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
-    filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.4));
-    -webkit-filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.4));
+    box-shadow: none;
+    filter: none;
+    -webkit-filter: none;
 }
 
 .title-img {
@@ -449,7 +445,7 @@ body.has-inner-page {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
-    padding: 24px 20px;
+    padding: 0 20px 24px;
     background: var(--bg-gradient-start);
     flex-shrink: 0;
 }
@@ -830,10 +826,13 @@ body.has-inner-page {
 }
 
 /* ============================================
-   底部蓝色Banner
+   底部 Banner
    ============================================ */
 .footer-banner {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
+    background-image: url('banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 80px;
     width: 100%;
     margin-top: 0;
@@ -1154,12 +1153,11 @@ body.has-inner-page {
 @media (max-width: 767px) {
     .header-banner {
         min-height: 22vh;
-        padding: 24px 16px 28px;
+        padding: 24px 0 0;
     }
     
-    .banner-title-image {
-        max-width: 95%;
-        max-width: 380px;
+    .banner-title-image-container {
+        padding: 0;
     }
     
     .banner-english-subtitle {
@@ -1341,6 +1339,10 @@ body.has-inner-page {
         max-width: 600px;
     }
 
+    .banner-title-image-container {
+        padding: 0;
+    }
+
     .grid-container {
         gap: 20px;
         padding: 28px 24px;
@@ -1379,7 +1381,7 @@ body.has-inner-page {
     .action-buttons {
         display: none;
     }
-    
+
     body {
         background: #fff;
     }
