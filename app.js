@@ -2587,10 +2587,9 @@ function renderHome() {
                         <div class="grid-item-title">福利补助</div>
                     </a>
                 </div>
-                
-                <!-- 底部蓝色Banner -->
-                <div class="footer-banner"></div>
             </div>
+            <!-- 底部蓝色Banner（独立于滚动区域，始终在最下端） -->
+            <div class="footer-banner"></div>
 
             <!-- 阅读须知弹窗（打开主页时显示） -->
             <div id="disclaimer-modal-overlay" class="disclaimer-modal-overlay">

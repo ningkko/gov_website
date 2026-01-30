@@ -68,6 +68,7 @@ body.has-inner-page {
     margin: 0 auto;
     background: transparent;
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
@@ -116,6 +117,10 @@ body.has-inner-page {
     position: relative;
     min-height: 0;
     background: #fff;
+    /* 移动端：可滚动区域，底部留给 footer-banner */
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
 }
 
 /* 确保首页内容不会超出底部蓝色条 */
@@ -1484,22 +1489,23 @@ body.has-inner-page {
         max-height: 100dvh;
     }
     
-    /* 移动端确保页面填满屏幕 */
+    /* 移动端：页面填满屏幕，内容区滚动，蓝色 banner 固定在最下端 */
     .page:not(.inner-page) {
         min-height: 100dvh;
         height: 100dvh;
     }
     
     .page:not(.inner-page) .page-content {
-        height: 100%;
+        flex: 1;
+        min-height: 0;
         overflow-y: auto;
         overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
         overscroll-behavior-y: contain;
     }
     
-    /* 确保footer在底部，无多余空间 */
     .footer-banner {
+        flex-shrink: 0;
         margin-bottom: 0;
         padding-bottom: 0;
     }
