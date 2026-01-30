@@ -693,11 +693,137 @@ body.has-inner-page {
     letter-spacing: 0.2px;
 }
 
-.qa-answer-text p {
+/* 统一每条问答的块间距：段落、表格等同一规则 */
+.qa-answer-text > p,
+.qa-answer-text > .content-para,
+.qa-answer-text > .content-table-wrapper {
     margin-bottom: 12px;
 }
 
-.qa-answer-text p:last-child {
+.qa-answer-text > p:last-child,
+.qa-answer-text > .content-para:last-child,
+.qa-answer-text > .content-para--bullet:last-child,
+.qa-answer-text > .content-para--contact:last-child,
+.qa-answer-text > .content-table-wrapper:last-child {
+    margin-bottom: 0;
+}
+
+.qa-answer-text p,
+.qa-answer-text .content-para,
+.collection-detail-content p,
+.collection-detail-content .content-para {
+    margin-bottom: 12px;
+}
+
+.qa-answer-text p:last-child,
+.qa-answer-text .content-para:last-child,
+.qa-answer-text .content-para--bullet:last-child,
+.qa-answer-text .content-para--contact:last-child,
+.collection-detail-content p:last-child,
+.collection-detail-content .content-para:last-child,
+.collection-detail-content .content-para--bullet:last-child,
+.collection-detail-content .content-para--contact:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   内容内表格（手机端与网页端兼容）
+   ============================================ */
+.content-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 0 12px 0;
+    border-radius: var(--radius-small);
+    border: 1px solid rgba(30, 136, 229, 0.12);
+    background: #fff;
+}
+
+.content-table {
+    width: 100%;
+    min-width: 280px;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.5;
+    table-layout: fixed; /* 列宽均分，不按表头/内容撑开 */
+}
+
+.content-table th,
+.content-table td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(30, 136, 229, 0.1);
+    vertical-align: top;
+    word-break: break-word;
+}
+
+.content-table th {
+    background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+    color: var(--primary-blue-dark);
+    font-weight: 600;
+    word-break: break-word; /* 表头也换行，不撑开列宽 */
+}
+
+.content-table tbody tr:hover {
+    background: rgba(30, 136, 229, 0.04);
+}
+
+.content-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.qa-answer-text .content-table-wrapper,
+.collection-detail-content .content-table-wrapper {
+    white-space: normal;
+}
+
+/* 政策汇编等仍可能用列表，保留样式；政策问答已统一为段落 */
+.content-list {
+    margin: 0 0 12px 0;
+    padding-left: 0;
+    list-style-position: outside;
+}
+
+.content-list--ordered {
+    list-style: none;
+}
+
+.content-list__item {
+    margin-bottom: 10px;
+    line-height: 1.7;
+    border-left: 3px solid rgba(30, 136, 229, 0.3);
+    padding-left: 12px;
+    margin-left: 0;
+}
+
+.content-list__item:last-child {
+    margin-bottom: 0;
+}
+
+.qa-answer-text .content-list,
+.collection-detail-content .content-list {
+    color: #333;
+}
+
+/* 问答/汇编内容中 ● 列表项（由 formatParagraphWithLists 拆出的段落） */
+.content-para--bullet {
+    padding-left: 0;
+    margin-bottom: 10px;
+}
+
+.content-para--bullet:last-child {
+    margin-bottom: 0;
+}
+
+/* 咨询电话/联系名单：机构 + 电话，每行一条 */
+.content-para--contact {
+    margin-bottom: 8px;
+    padding-left: 0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.content-para--contact:last-child {
     margin-bottom: 0;
 }
 
@@ -1148,6 +1274,66 @@ body.has-inner-page {
 }
 
 /* ============================================
+   移动端表格：卡片式布局
+   ============================================ */
+@media (max-width: 767px) {
+    .content-table-wrapper {
+        overflow-x: visible;
+        margin: 12px 0;
+    }
+
+    .content-table,
+    .content-table thead,
+    .content-table tbody,
+    .content-table tr,
+    .content-table th,
+    .content-table td {
+        display: block;
+    }
+
+    .content-table thead tr {
+        position: absolute;
+        left: -9999px;
+        top: -9999px;
+    }
+
+    .content-table tr {
+        margin-bottom: 12px;
+        border: 1px solid rgba(30, 136, 229, 0.15);
+        border-radius: var(--radius-small);
+        padding: 0;
+        background: #fff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    }
+
+    .content-table td {
+        padding: 10px 12px;
+        border-bottom: 1px solid rgba(30, 136, 229, 0.08);
+        position: relative;
+        padding-left: 45%;
+    }
+
+    .content-table td:last-child {
+        border-bottom: none;
+    }
+
+    .content-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 12px;
+        top: 10px;
+        width: 40%;
+        font-weight: 600;
+        color: var(--primary-blue-dark);
+        font-size: 13px;
+    }
+
+    .content-table td:empty::before {
+        content: '';
+    }
+}
+
+/* ============================================
    移动端特定优化
    ============================================ */
 @media (max-width: 767px) {
@@ -1373,13 +1559,88 @@ body.has-inner-page {
 }
 
 /* ============================================
+   阅读须知弹窗
+   ============================================ */
+.disclaimer-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.disclaimer-modal-overlay.disclaimer-modal-hidden {
+    display: none;
+}
+
+.disclaimer-modal {
+    background: #fff;
+    border-radius: var(--radius-large);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    max-width: 480px;
+    width: 100%;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.disclaimer-modal-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    padding: 20px 20px 12px;
+    margin: 0;
+    border-bottom: 1px solid rgba(30, 136, 229, 0.15);
+}
+
+.disclaimer-modal-body {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555;
+    padding: 16px 20px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    flex: 1;
+}
+
+.disclaimer-modal-btn {
+    margin: 0 20px 20px;
+    padding: 14px 24px;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-medium);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.disclaimer-modal-btn:hover {
+    box-shadow: 0 4px 12px rgba(30, 136, 229, 0.35);
+}
+
+.disclaimer-modal-btn:active {
+    opacity: 0.9;
+}
+
+/* ============================================
    打印样式
    ============================================ */
 @media print {
     .nav-bar,
     .search-bar,
-    .action-buttons {
-        display: none;
+    .action-buttons,
+    .disclaimer-modal-overlay {
+        display: none !important;
     }
 
     body {
