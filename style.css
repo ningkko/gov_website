@@ -51,6 +51,12 @@ body {
     padding: 0;
 }
 
+#app {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
 /* 子页面时防止body滚动 */
 body.has-inner-page {
     overflow: hidden;
@@ -66,6 +72,7 @@ body.has-inner-page {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+    padding: 0;
     background: transparent;
     min-height: 100vh;
     min-height: 100dvh;
@@ -1355,7 +1362,7 @@ body.has-inner-page {
         flex-shrink: 0;
     }
     
-    /* 九宫格占满中间空间，三行等分高度，调节行距使上下图贴顶贴底 */
+    /* 九宫格占满中间空间，三行等分高度；去掉上下多余留白 */
     .page:not(.inner-page) .grid-container {
         flex: 1;
         min-height: 0;
@@ -1363,7 +1370,7 @@ body.has-inner-page {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr 1fr 1fr;
         gap: 12px;
-        padding: 16px;
+        padding: 8px 16px;
         align-content: stretch;
         justify-content: stretch;
     }
@@ -1379,9 +1386,23 @@ body.has-inner-page {
         overflow: hidden;
     }
     
+    /* 顶端不留白：去掉 header 上内边距，内容顶对齐 */
+    .page:not(.inner-page) .header-banner {
+        padding: 0;
+        min-height: 0;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+    
+    .page:not(.inner-page) .banner-title-image-container,
+    .page:not(.inner-page) .banner-title-image {
+        display: block;
+        width: 100%;
+    }
+    
     .header-banner {
         min-height: 22vh;
-        padding: 24px 0 0;
+        padding: 0;
     }
     
     .banner-title-image-container {
