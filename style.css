@@ -1362,15 +1362,18 @@ body.has-inner-page {
         flex-shrink: 0;
     }
     
-    /* 九宫格占满中间空间，三行等分高度；四周留白相等（含与 title 的间距） */
+    /* 九宫格：第一行到顶 = 最后一行到底（同值），中间行距一致且适中 */
     .page:not(.inner-page) .grid-container {
         flex: 1;
         min-height: 0;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr 1fr 1fr;
-        gap: 12px;
-        padding: 16px;
+        gap: 10px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 16px;
+        padding-right: 16px;
         align-content: stretch;
         justify-content: stretch;
     }
