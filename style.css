@@ -1342,6 +1342,43 @@ body.has-inner-page {
    移动端特定优化
    ============================================ */
 @media (max-width: 767px) {
+    /* 首页一屏布局：顶部图贴顶、三行 icon 等分中间、底部蓝条贴底 */
+    .page:not(.inner-page) .page-content {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        flex: 1;
+        min-height: 0;
+    }
+    
+    .page:not(.inner-page) .header-banner {
+        flex-shrink: 0;
+    }
+    
+    /* 九宫格占满中间空间，三行等分高度，调节行距使上下图贴顶贴底 */
+    .page:not(.inner-page) .grid-container {
+        flex: 1;
+        min-height: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 12px;
+        padding: 16px;
+        align-content: stretch;
+        justify-content: stretch;
+    }
+    
+    .page:not(.inner-page) .grid-item {
+        aspect-ratio: 1;
+        min-height: 0;
+        max-height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    
     .header-banner {
         min-height: 22vh;
         padding: 24px 0 0;
@@ -1489,19 +1526,10 @@ body.has-inner-page {
         max-height: 100dvh;
     }
     
-    /* 移动端：页面填满屏幕，内容区滚动，蓝色 banner 固定在最下端 */
+    /* 移动端：页面填满屏幕，首页不滚动，蓝色 banner 固定在最下端 */
     .page:not(.inner-page) {
         min-height: 100dvh;
         height: 100dvh;
-    }
-    
-    .page:not(.inner-page) .page-content {
-        flex: 1;
-        min-height: 0;
-        overflow-y: auto;
-        overflow-x: hidden;
-        -webkit-overflow-scrolling: touch;
-        overscroll-behavior-y: contain;
     }
     
     .footer-banner {
