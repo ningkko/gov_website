@@ -1726,3 +1726,88 @@ body.has-inner-page {
         background: #fff;
     }
 }
+
+/* ============================================
+   首页九宫格 v2：整块分类色卡片 + 双色图标 + 角落大图标
+   ============================================ */
+.grid-item[data-cat="job"]    { --c: #2457C5; --t: #E3ECFB; }
+.grid-item[data-cat="ss"]     { --c: #0B8A7A; --t: #DDF3EF; }
+.grid-item[data-cat="law"]    { --c: #4B45B8; --t: #E8E7F8; }
+.grid-item[data-cat="edu"]    { --c: #B4610A; --t: #FBEEDC; }
+.grid-item[data-cat="biz"]    { --c: #2E8B3E; --t: #E2F3E4; }
+.grid-item[data-cat="id"]     { --c: #1F6E9C; --t: #DFEEF6; }
+.grid-item[data-cat="home"]   { --c: #C2541B; --t: #FBE7DC; }
+.grid-item[data-cat="family"] { --c: #B83A68; --t: #F9E3EB; }
+.grid-item[data-cat="aid"]    { --c: #B8322E; --t: #F9E2E1; }
+
+.grid-item[data-cat] {
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+    padding: 14px 14px 13px;
+    background: linear-gradient(160deg, #fff 30%, var(--t) 100%);
+    border: 1px solid color-mix(in srgb, var(--c) 14%, transparent);
+    box-shadow: 0 1px 2px rgba(22, 50, 79, 0.06);
+    border-radius: 18px;
+    color: #16324F;
+}
+.grid-item[data-cat]::before { display: none; }
+.grid-item[data-cat]:hover { transform: none; box-shadow: 0 1px 2px rgba(22, 50, 79, 0.06); }
+.grid-item[data-cat]:active { transform: scale(0.97); background: var(--t); }
+.grid-item[data-cat]:focus-visible { outline: 3px solid var(--c); outline-offset: 2px; }
+
+.grid-item[data-cat] .grid-item-icon {
+    width: 52px; height: 52px; min-width: 52px; min-height: 52px;
+    margin: 0;
+    border-radius: 13px;
+    background: var(--t);
+    box-shadow: none;
+    transition: none;
+}
+.grid-item[data-cat]:hover .grid-item-icon { transform: none; box-shadow: none; }
+.grid-item[data-cat] .grid-item-icon svg { width: 31px; height: 31px; color: var(--c); stroke-width: 1.7; }
+.grid-item[data-cat] svg .fill { fill: color-mix(in srgb, var(--c) 22%, #fff); }
+
+.grid-item-text { position: relative; z-index: 1; }
+.grid-item[data-cat] .grid-item-title {
+    font-size: 17px; font-weight: 700; color: #16324F; letter-spacing: 0.02em; line-height: 1.25;
+}
+.grid-item-sub {
+    margin-top: 3px; font-size: 13px; white-space: nowrap; line-height: 1.35; color: color-mix(in srgb, var(--c) 70%, #4a5a6a);
+}
+.grid-item-mark {
+    position: absolute; right: -14px; bottom: -14px;
+    width: 92px; height: 92px;
+    color: var(--c); opacity: 0.09; stroke-width: 1.4;
+    pointer-events: none;
+}
+.grid-item-mark .fill { fill: var(--c) !important; }
+
+@media (max-width: 767px) {
+    .page:not(.inner-page) .grid-container { gap: 10px; }
+    .page:not(.inner-page) .grid-item[data-cat] {
+        aspect-ratio: auto;
+        height: 100%;
+        max-height: none;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .grid-item[data-cat] .grid-item-title { font-size: 16px; }
+    .grid-item[data-cat] .grid-item-icon { width: 48px; height: 48px; min-width: 48px; min-height: 48px; }
+    .grid-item[data-cat] .grid-item-icon svg { width: 29px; height: 29px; }
+}
+@media (max-height: 700px) and (max-width: 767px) {
+    .grid-item[data-cat] .grid-item-icon { width: 38px; height: 38px; min-width: 38px; min-height: 38px; border-radius: 11px; }
+    .grid-item[data-cat] .grid-item-icon svg { width: 23px; height: 23px; }
+    .page:not(.inner-page) .grid-item[data-cat] { padding: 10px 11px; }
+    .grid-item-mark { width: 70px; height: 70px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .grid-item[data-cat] { transition: none; }
+}
+
+/* 正文中的图片（二维码、流程图） */
+.content-figure { margin: 12px 0 16px; text-align: center; }
+.content-figure img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #e3e9f0; background: #fff; }
+.content-figure img[src*="qr-"] { width: 180px; padding: 8px; }
+.content-figure figcaption { margin-top: 6px; font-size: 13px; color: #5b6b7b; }

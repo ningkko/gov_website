@@ -1331,7 +1331,7 @@ const qaItems = [
         id: 'qa-rights-protection-1',
         categoryId: 'rights-protection',
         question: '农民工维护合法权益有哪些途径？',
-        answer: `①协商维权；②调解维权；③劳动监察举报、投诉维权；申请劳动仲裁维权；⑤信访维权；⑥司法诉讼维权。`
+        answer: `①协商维权；②调解维权；③劳动监察举报、投诉维权；④申请劳动仲裁维权；⑤信访维权；⑥司法诉讼维权。`
     },
     {
         id: 'qa-rights-protection-2',
@@ -2969,6 +2969,8 @@ GYB(创业意识培训）200元/人；SYB（创办你的企业系列培训）100
 
 可扫描以下二维码参加“送码入户，一键贷款”金融服务乡村振兴专项活动，获取便捷、安全、高效的金融服务。
 
+[图片:images/qr-xindai-zhinong.png|“送码入户，一键贷款”二维码]
+
 咨询电话：0832-2023832（市农业农村局计划投资财务科）
 
 13696053026（内江农商银行）
@@ -3081,6 +3083,8 @@ GYB(创业意识培训）200元/人；SYB（创办你的企业系列培训）100
 二、核心内容
 
 提供3—10万元免息、免担保的创业启动资金贷款；咨询培训和“一对一”志愿者导师陪伴式导师辅导3年；引导创业青年进入工商网络，帮助青年创业成功。
+
+[图片:images/qingnian-chuangye-liucheng.jpg|四川青年创业促进计划申请流程]
 
 咨询电话：
 共青团内江市委青年发展部：0832-2023464`
@@ -3230,6 +3234,8 @@ GYB(创业意识培训）200元/人；SYB（创办你的企业系列培训）100
 川易贷-内江金融综合服务平台是内江市一站式综合金融服务载体，汇聚信贷、财险、寿险、政策性农业保险、甜惠保、证券、基金、小额贷款八大类金融资源，涵盖天府系列产业贷特色产品矩阵，构建金融产品检索、财金政策查询、融资供需对接、重点项目撮合、奖补在线申报、政务服务直达六大功能体系。平台支持金融产品精准检索与国家、省、市三级财金政策组合查询；企业可自主发布融资需求，平台依托智能算法匹配适配金融产品，推动金融机构限时响应；同步发布重点项目核心信息，搭建银企对接桥梁，实现财金互动奖补政策一键查询与线上申报，集成企业信用查询、信用修复指引等配套服务，接入多类政务服务平台直达入口，全维度畅通服务渠道，助力市场主体高效获取金融支持与政策红利。
 
 平台地址：https://njrzxyfw.com/，可扫描以下二维码，获取便捷、安全、高效的金融服务。
+
+[图片:images/qr-chuanyidai.png|川易贷小程序二维码]
 
 （二）农业银行内江分行信贷政策
 
@@ -3975,43 +3981,52 @@ function renderHome() {
                 <!-- 九宫格入口区域（3×3 卡片） -->
                 <div class="grid-container">
                     <!-- 第一行 -->
-                    <a href="#/qa/employment" class="grid-item">
-                        <div class="grid-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/><path d="M11 13v2h2v-2"/></svg></div>
-                        <div class="grid-item-title">就业服务</div>
+                    <a href="#/qa/employment" class="grid-item" data-cat="job">
+                        <div class="grid-item-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2" class="fill"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/><path d="M11 13v2h2v-2"/></svg></div>
+                        <div class="grid-item-text"><div class="grid-item-title">就业服务</div><div class="grid-item-sub">找工作 学技能</div></div>
+                        <svg class="grid-item-mark" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2" class="fill"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/><path d="M11 13v2h2v-2"/></svg>
                     </a>
-                    <a href="#/qa/social-security" class="grid-item">
-                        <div class="grid-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M12 9v6M9 12h6"/></svg></div>
-                        <div class="grid-item-title">社保医保</div>
+                    <a href="#/qa/social-security" class="grid-item" data-cat="ss">
+                        <div class="grid-item-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z" class="fill"/><path d="M12 9v6M9 12h6"/></svg></div>
+                        <div class="grid-item-text"><div class="grid-item-title">社保医保</div><div class="grid-item-sub">社保卡 养老</div></div>
+                        <svg class="grid-item-mark" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z" class="fill"/><path d="M12 9v6M9 12h6"/></svg>
                     </a>
-                    <a href="#/qa/rights-protection" class="grid-item">
-                        <div class="grid-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M7 20h10M5 7h14"/><path d="M5 7l-3 6a3 3 0 0 0 6 0z"/><path d="M19 7l-3 6a3 3 0 0 0 6 0z"/></svg></div>
-                        <div class="grid-item-title">维权服务</div>
+                    <a href="#/qa/rights-protection" class="grid-item" data-cat="law">
+                        <div class="grid-item-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7l-3 6a3 3 0 0 0 6 0z" class="fill"/><path d="M19 7l-3 6a3 3 0 0 0 6 0z" class="fill"/><path d="M12 4v16M7 20h10M5 7h14"/></svg></div>
+                        <div class="grid-item-text"><div class="grid-item-title">维权服务</div><div class="grid-item-sub">讨薪 仲裁</div></div>
+                        <svg class="grid-item-mark" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7l-3 6a3 3 0 0 0 6 0z" class="fill"/><path d="M19 7l-3 6a3 3 0 0 0 6 0z" class="fill"/><path d="M12 4v16M7 20h10M5 7h14"/></svg>
                     </a>
                     <!-- 第二行 -->
-                    <a href="#/qa/children-education" class="grid-item">
-                        <div class="grid-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></svg></div>
-                        <div class="grid-item-title">子女入学</div>
+                    <a href="#/qa/children-education" class="grid-item" data-cat="edu">
+                        <div class="grid-item-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z" class="fill"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></svg></div>
+                        <div class="grid-item-text"><div class="grid-item-title">子女入学</div><div class="grid-item-sub">学位 助学</div></div>
+                        <svg class="grid-item-mark" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z" class="fill"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></svg>
                     </a>
-                    <a href="#/collection" class="grid-item">
-                        <div class="grid-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-9"/><path d="M12 12c0-4 3-6 7-6 0 4-3 6-7 6z"/><path d="M12 15c0-3-2.5-5-6-5 0 3 2.5 5 6 5z"/><path d="M7 21h10"/></svg></div>
-                        <div class="grid-item-title">返乡创业</div>
+                    <a href="#/collection" class="grid-item" data-cat="biz">
+                        <div class="grid-item-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c0-4 3-6 7-6 0 4-3 6-7 6z" class="fill"/><path d="M12 15c0-3-2.5-5-6-5 0 3 2.5 5 6 5z" class="fill"/><path d="M12 21v-9"/><path d="M7 21h10"/></svg></div>
+                        <div class="grid-item-text"><div class="grid-item-title">返乡创业</div><div class="grid-item-sub">补贴 贷款</div></div>
+                        <svg class="grid-item-mark" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c0-4 3-6 7-6 0 4-3 6-7 6z" class="fill"/><path d="M12 15c0-3-2.5-5-6-5 0 3 2.5 5 6 5z" class="fill"/><path d="M12 21v-9"/><path d="M7 21h10"/></svg>
                     </a>
-                    <a href="#/qa/certificate-license" class="grid-item">
-                        <div class="grid-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="8" cy="11" r="2"/><path d="M5 16c.5-1.5 1.7-2.5 3-2.5s2.5 1 3 2.5"/><path d="M14 10h5M14 14h4"/></svg></div>
-                        <div class="grid-item-title">证照办理</div>
+                    <a href="#/qa/certificate-license" class="grid-item" data-cat="id">
+                        <div class="grid-item-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2" class="fill"/><circle cx="8" cy="11" r="2"/><path d="M5 16c.5-1.5 1.7-2.5 3-2.5s2.5 1 3 2.5"/><path d="M14 10h5M14 14h4"/></svg></div>
+                        <div class="grid-item-text"><div class="grid-item-title">证照办理</div><div class="grid-item-sub">落户 证件</div></div>
+                        <svg class="grid-item-mark" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2" class="fill"/><circle cx="8" cy="11" r="2"/><path d="M5 16c.5-1.5 1.7-2.5 3-2.5s2.5 1 3 2.5"/><path d="M14 10h5M14 14h4"/></svg>
                     </a>
                     <!-- 第三行 -->
-                    <a href="#/qa/housing" class="grid-item">
-                        <div class="grid-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></div>
-                        <div class="grid-item-title">住房保障</div>
+                    <a href="#/qa/housing" class="grid-item" data-cat="home">
+                        <div class="grid-item-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10v10h14V10l-7-5.4z" class="fill"/><path d="M3 11l9-7 9 7"/><path d="M10 20v-6h4v6"/></svg></div>
+                        <div class="grid-item-text"><div class="grid-item-title">住房保障</div><div class="grid-item-sub">公租房 公积金</div></div>
+                        <svg class="grid-item-mark" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10v10h14V10l-7-5.4z" class="fill"/><path d="M3 11l9-7 9 7"/><path d="M10 20v-6h4v6"/></svg>
                     </a>
-                    <a href="#/qa/marriage-fertility" class="grid-item">
-                        <div class="grid-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-8-4.6-8-10.2A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8 2.8C20 15.4 12 20 12 20z"/></svg></div>
-                        <div class="grid-item-title">婚姻生育</div>
+                    <a href="#/qa/marriage-fertility" class="grid-item" data-cat="family">
+                        <div class="grid-item-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-8-4.6-8-10.2A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8 2.8C20 15.4 12 20 12 20z" class="fill"/></svg></div>
+                        <div class="grid-item-text"><div class="grid-item-title">婚姻生育</div><div class="grid-item-sub">结婚 生育</div></div>
+                        <svg class="grid-item-mark" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-8-4.6-8-10.2A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8 2.8C20 15.4 12 20 12 20z" class="fill"/></svg>
                     </a>
-                    <a href="#/qa/welfare-subsidy" class="grid-item">
-                        <div class="grid-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 7.5l3 4 3-4M12 11.5V17M9 12.5h6M9 15h6"/></svg></div>
-                        <div class="grid-item-title">福利补助</div>
+                    <a href="#/qa/welfare-subsidy" class="grid-item" data-cat="aid">
+                        <div class="grid-item-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" class="fill"/><path d="M9 7.5l3 4 3-4M12 11.5V17M9 12.5h6M9 15h6"/></svg></div>
+                        <div class="grid-item-text"><div class="grid-item-title">福利补助</div><div class="grid-item-sub">低保 救助</div></div>
+                        <svg class="grid-item-mark" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" class="fill"/><path d="M9 7.5l3 4 3-4M12 11.5V17M9 12.5h6M9 15h6"/></svg>
                     </a>
                 </div>
             </div>
@@ -4534,6 +4549,11 @@ function formatContentWithTables(text) {
                 segments.forEach(function(seg) {
                     const s = seg.trim();
                     if (!s) return;
+                    var img = s.match(/^\[图片:([^\]|]+)(?:\|([^\]]*))?\]$/);
+                    if (img) {
+                        out.push('<figure class="content-figure"><img src="' + escapeHtml(img[1]) + '" alt="' + escapeHtml(img[2] || '') + '" loading="lazy">' + (img[2] ? '<figcaption>' + escapeHtml(img[2]) + '</figcaption>' : '') + '</figure>');
+                        return;
+                    }
                     var contactHtml = formatContactList(s);
                     out.push(contactHtml ? contactHtml : formatParagraphWithLists(s));
                 });
