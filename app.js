@@ -2549,41 +2549,41 @@ function renderHome() {
                 <div class="grid-container">
                     <!-- 第一行 -->
                     <a href="#/qa/employment" class="grid-item">
-                        <div class="grid-item-icon">💼</div>
+                        <div class="grid-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/><path d="M11 13v2h2v-2"/></svg></div>
                         <div class="grid-item-title">就业服务</div>
                     </a>
                     <a href="#/qa/social-security" class="grid-item">
-                        <div class="grid-item-icon">💳</div>
+                        <div class="grid-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M12 9v6M9 12h6"/></svg></div>
                         <div class="grid-item-title">社保医保</div>
                     </a>
                     <a href="#/qa/rights-protection" class="grid-item">
-                        <div class="grid-item-icon">⚖</div>
+                        <div class="grid-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M7 20h10M5 7h14"/><path d="M5 7l-3 6a3 3 0 0 0 6 0z"/><path d="M19 7l-3 6a3 3 0 0 0 6 0z"/></svg></div>
                         <div class="grid-item-title">维权服务</div>
                     </a>
                     <!-- 第二行 -->
                     <a href="#/qa/children-education" class="grid-item">
-                        <div class="grid-item-icon">🎓</div>
+                        <div class="grid-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></svg></div>
                         <div class="grid-item-title">子女入学</div>
                     </a>
                     <a href="#/collection" class="grid-item">
-                        <div class="grid-item-icon">📄</div>
+                        <div class="grid-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-9"/><path d="M12 12c0-4 3-6 7-6 0 4-3 6-7 6z"/><path d="M12 15c0-3-2.5-5-6-5 0 3 2.5 5 6 5z"/><path d="M7 21h10"/></svg></div>
                         <div class="grid-item-title">返乡创业</div>
                     </a>
                     <a href="#/qa/certificate-license" class="grid-item">
-                        <div class="grid-item-icon">🆔</div>
+                        <div class="grid-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="8" cy="11" r="2"/><path d="M5 16c.5-1.5 1.7-2.5 3-2.5s2.5 1 3 2.5"/><path d="M14 10h5M14 14h4"/></svg></div>
                         <div class="grid-item-title">证照办理</div>
                     </a>
                     <!-- 第三行 -->
                     <a href="#/qa/housing" class="grid-item">
-                        <div class="grid-item-icon">🏠</div>
+                        <div class="grid-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></div>
                         <div class="grid-item-title">住房保障</div>
                     </a>
                     <a href="#/qa/marriage-fertility" class="grid-item">
-                        <div class="grid-item-icon">💑</div>
+                        <div class="grid-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-8-4.6-8-10.2A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8 2.8C20 15.4 12 20 12 20z"/></svg></div>
                         <div class="grid-item-title">婚姻生育</div>
                     </a>
                     <a href="#/qa/welfare-subsidy" class="grid-item">
-                        <div class="grid-item-icon">💰</div>
+                        <div class="grid-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 7.5l3 4 3-4M12 11.5V17M9 12.5h6M9 15h6"/></svg></div>
                         <div class="grid-item-title">福利补助</div>
                     </a>
                 </div>

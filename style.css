@@ -510,7 +510,7 @@ body.has-inner-page {
     box-shadow: var(--shadow-card);
 }
 
-/* 蓝色方块底座 + 彩色emoji图标 */
+/* 分类彩色圆角底座 + 统一白色线性图标 */
 .grid-item-icon {
     font-size: 36px;
     margin-bottom: 16px;
@@ -535,13 +535,30 @@ body.has-inner-page {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.grid-item-icon svg {
+    width: 52%;
+    height: 52%;
+    color: #fff;
+    display: block;
+}
+
+/* 九宫格每个入口一种颜色 */
+.grid-item:nth-child(1) .grid-item-icon { background: linear-gradient(135deg, #1E7BE6 0%, #4BA3F7 100%); box-shadow: 0 4px 10px #1E7BE655; } /* 就业服务 */
+.grid-item:nth-child(2) .grid-item-icon { background: linear-gradient(135deg, #0CA678 0%, #38D9A9 100%); box-shadow: 0 4px 10px #0CA67855; } /* 社保医保 */
+.grid-item:nth-child(3) .grid-item-icon { background: linear-gradient(135deg, #4263EB 0%, #748FFC 100%); box-shadow: 0 4px 10px #4263EB55; } /* 维权服务 */
+.grid-item:nth-child(4) .grid-item-icon { background: linear-gradient(135deg, #AE3EC9 0%, #DA77F2 100%); box-shadow: 0 4px 10px #AE3EC955; } /* 子女入学 */
+.grid-item:nth-child(5) .grid-item-icon { background: linear-gradient(135deg, #74B816 0%, #A9E34B 100%); box-shadow: 0 4px 10px #74B81655; } /* 返乡创业 */
+.grid-item:nth-child(6) .grid-item-icon { background: linear-gradient(135deg, #1098AD 0%, #3BC9DB 100%); box-shadow: 0 4px 10px #1098AD55; } /* 证照办理 */
+.grid-item:nth-child(7) .grid-item-icon { background: linear-gradient(135deg, #F59F00 0%, #FFC233 100%); box-shadow: 0 4px 10px #F59F0055; } /* 住房保障 */
+.grid-item:nth-child(8) .grid-item-icon { background: linear-gradient(135deg, #E64980 0%, #F783AC 100%); box-shadow: 0 4px 10px #E6498055; } /* 婚姻生育 */
+.grid-item:nth-child(9) .grid-item-icon { background: linear-gradient(135deg, #E8590C 0%, #FF8787 100%); box-shadow: 0 4px 10px #E8590C55; } /* 福利补助 */
+
 .grid-item:hover .grid-item-icon {
     transform: scale(1.05) translateY(-2px);
     box-shadow: 
         0 4px 12px rgba(30, 136, 229, 0.3);
 }
 
-/* 移除复杂的CSS图标样式，使用简单的Unicode字符 */
 
 .grid-item-title {
     font-size: 15px;
