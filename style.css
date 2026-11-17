@@ -1811,3 +1811,114 @@ body.has-inner-page {
 .content-figure img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #e3e9f0; background: #fff; }
 .content-figure img[src*="qr-"] { width: 180px; padding: 8px; }
 .content-figure figcaption { margin-top: 6px; font-size: 13px; color: #5b6b7b; }
+
+/* ============================================
+   首页 v3：与 2026 年纸质封面一致的浅蓝风格
+   白 → 浅蓝渐变、蓝色标题、线描城市天际线、底部蓝色波浪
+   ============================================ */
+.page.home-v3 {
+    --hv-blue: #1A56A6;
+    --hv-blue-2: #2F72C4;
+    --hv-ink: #16345F;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F3F8FD 38%, #E3EFFA 100%);
+    color: var(--hv-ink);
+}
+.hv-head {
+    flex: none;
+    text-align: center;
+    padding: clamp(22px, 5vh, 46px) 20px 0;
+}
+.hv-logo { display: block; width: min(76%, 340px); height: auto; margin: 0 auto; }
+.hv-title {
+    margin-top: clamp(12px, 2.6vh, 24px);
+    font-size: clamp(30px, 8.6vw, 40px);
+    font-weight: 900;
+    letter-spacing: .12em;
+    color: var(--hv-blue);
+    line-height: 1.15;
+}
+.hv-en { margin-top: 4px; font-size: 14px; font-weight: 700; color: var(--hv-blue-2); letter-spacing: .04em; }
+
+.hv-grid {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    gap: clamp(8px, 1.4vh, 12px) 10px;
+    padding: clamp(14px, 2.6vh, 24px) 16px clamp(6px, 1vh, 10px);
+    align-content: center;
+    position: relative;
+    z-index: 2;
+}
+.hv-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+    padding: 10px 4px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(47, 114, 196, 0.12);
+    box-shadow: 0 6px 18px -10px rgba(26, 86, 166, 0.35);
+    text-decoration: none;
+    color: var(--hv-ink);
+    -webkit-tap-highlight-color: transparent;
+    transition: transform .15s ease, background-color .15s ease;
+}
+.hv-item:active { transform: scale(0.96); background: #fff; }
+.hv-item:focus-visible { outline: 3px solid var(--hv-blue-2); outline-offset: 2px; }
+.hv-ic {
+    width: clamp(42px, 6.4vh, 54px);
+    height: clamp(42px, 6.4vh, 54px);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: var(--hv-blue);
+    background: linear-gradient(160deg, #EAF3FD 0%, #D5E6F8 100%);
+}
+.hv-ic svg { width: 56%; height: 56%; stroke-width: 1.7; }
+.hv-ic svg .fill { fill: #fff; }
+.hv-item[data-cat="biz"] { background: linear-gradient(160deg, #2F72C4 0%, #1A56A6 100%); border-color: transparent; color: #fff; }
+.hv-item[data-cat="biz"] .hv-ic { background: rgba(255, 255, 255, 0.18); color: #fff; }
+.hv-item[data-cat="biz"] .hv-ic svg .fill { fill: rgba(255, 255, 255, 0.25); }
+.hv-item[data-cat="biz"] i { color: #D7E7FA; }
+.hv-item b { margin-top: clamp(6px, 1vh, 9px); font-size: clamp(14px, 4vw, 16px); font-weight: 700; letter-spacing: .05em; }
+.hv-item i { margin-top: 2px; font-style: normal; font-size: 11.5px; color: #6E87A8; white-space: nowrap; }
+
+.hv-foot { flex: none; display: flex; flex-direction: column; align-items: stretch; }
+.hv-sky { display: block; width: 100%; height: clamp(40px, 6.5vh, 58px); color: #8FB3DD; opacity: .75; }
+.hv-credit {
+    text-align: center; font-size: 11.5px; line-height: 1.75; font-weight: 700; color: var(--hv-blue);
+    letter-spacing: .02em; padding: 6px 0 2px; background: linear-gradient(180deg, rgba(227,239,250,0) 0%, #E3EFFA 40%);
+}
+.hv-credit span { letter-spacing: .06em; }
+.hv-wave { display: block; width: 100%; height: clamp(32px, 5vh, 46px); margin-top: -2px; }
+
+@media (min-width: 768px) {
+    .hv-grid { max-width: 640px; margin: 0 auto; width: 100%; gap: 16px; }
+    .hv-item b { font-size: 17px; }
+}
+@media (prefers-reduced-motion: reduce) { .hv-item { transition: none; } }
+
+/* PDF 链接（政策原文、流程图下载） */
+.pdf-link {
+    display: flex; align-items: center; gap: 12px;
+    margin: 10px 0; padding: 12px 14px;
+    background: #F4F8FD; border: 1px solid #D6E4F5; border-radius: 12px;
+    color: #16345F; text-decoration: none; line-height: 1.45;
+}
+.pdf-link:active { background: #E8F1FB; }
+.pdf-link-tag {
+    flex: none; font-size: 11px; font-weight: 800; color: #fff; background: #D64032;
+    border-radius: 5px; padding: 3px 6px; letter-spacing: .04em;
+}
+.pdf-link-text { font-size: 14.5px; font-weight: 600; }
+.pdf-link-text small { display: block; margin-top: 2px; font-size: 12px; font-weight: 400; color: #6E87A8; }
+.policy-docs { margin: 22px 0 10px; }
+.policy-docs-title { font-size: 16px; font-weight: 700; color: #16345F; margin-bottom: 4px; padding-left: 10px; border-left: 4px solid #1A56A6; line-height: 1.2; }
