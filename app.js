@@ -3979,7 +3979,7 @@ function render() {
 function renderHome() {
     const pageHtml = `
         <div class="page home g-home">
-            <img src="home_title.png" alt="内江市农民工服务保障 用心用情用力 务实服务保障 倾心倾情倾力 深耕返乡创业" class="g-banner">
+            <img src="home_title_2026.png" alt="内江市农民工服务保障 用心用情用力 务实服务保障 倾心倾情倾力 深耕返乡创业" class="g-banner">
             <main class="g-main">
                 <section class="g-frame">
                     <svg class="g-corner g-tl" viewBox="0 0 26 26" aria-hidden="true"><path d="M1 25V1h24M6 25V6h19M11 25V11h14" fill="none" stroke="currentColor" stroke-width="2"/></svg><svg class="g-corner g-tr" viewBox="0 0 26 26" aria-hidden="true"><path d="M1 25V1h24M6 25V6h19M11 25V11h14" fill="none" stroke="currentColor" stroke-width="2"/></svg><svg class="g-corner g-bl" viewBox="0 0 26 26" aria-hidden="true"><path d="M1 25V1h24M6 25V6h19M11 25V11h14" fill="none" stroke="currentColor" stroke-width="2"/></svg><svg class="g-corner g-br" viewBox="0 0 26 26" aria-hidden="true"><path d="M1 25V1h24M6 25V6h19M11 25V11h14" fill="none" stroke="currentColor" stroke-width="2"/></svg>
@@ -3996,7 +3996,10 @@ function renderHome() {
                     <a href="#/qa/welfare-subsidy" class="g-item" data-cat="aid"><span class="g-seal"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" class="fill"/><path d="M9 7.5l3 4 3-4M12 11.5V17M9 12.5h6M9 15h6"/></svg></span><b>福利补助</b></a>
                     </nav>
                 </section>
-                <p class="g-motto">为农民工办实事</p>
+                <div class="g-dl">
+                    <a href="pdf/2026-wenda-shouce.pdf" target="_blank" rel="noopener"><span class="pdf-link-tag">PDF</span>问答手册全文</a>
+                    <a href="pdf/2026-chuangye-huibian.pdf" target="_blank" rel="noopener"><span class="pdf-link-tag">PDF</span>政策汇编全文</a>
+                </div>
             </main>
             <footer class="g-foot" aria-label="内江市民生工作领导小组农民工工作专项工作组 宣　内江市农民工服务中心 编"></footer>
 
@@ -4133,6 +4136,11 @@ function renderCollectionList() {
     const cards = list => list.map((item, i) => listCard(`#/collection-detail/${item.id}`, i + 1, item.title)).join('');
     const docs = `
                 <div class="policy-docs">
+                    <div class="policy-docs-title">全文下载</div>
+                    <a class="pdf-link" href="pdf/2026-chuangye-huibian.pdf" target="_blank" rel="noopener"><span class="pdf-link-tag">PDF</span><span class="pdf-link-text">内江市返乡下乡创业政策汇编（2026 年版）<small>全书 PDF，约 5 MB</small></span></a>
+                    <a class="pdf-link" href="pdf/2026-wenda-shouce.pdf" target="_blank" rel="noopener"><span class="pdf-link-tag">PDF</span><span class="pdf-link-text">内江市农民工服务保障工作问答手册（2026 年版）<small>全书 PDF，约 2 MB</small></span></a>
+                </div>
+                <div class="policy-docs">
                     <div class="policy-docs-title">政策原文</div>
                     ${policyDocs.map(d => `<a class="pdf-link" href="${d.file}" target="_blank" rel="noopener"><span class="pdf-link-tag">PDF</span><span class="pdf-link-text">${escapeHtml(d.title)}<small>${escapeHtml(d.no)}</small></span></a>`).join('')}
                 </div>`;
@@ -4142,7 +4150,7 @@ function renderCollectionList() {
             ${subHeader('返乡创业', '#/home')}
             <section class="sp-hero">
                 <h1>返乡下乡创业政策汇编</h1>
-                <p>共 ${collectionItems.length} 项政策　另附政策原文 ${policyDocs.length} 份</p>
+                <p>共 ${collectionItems.length} 项政策　文末可下载全书 PDF 和政策原文</p>
                 <div class="sp-search">
                     <input type="search" id="search-input" placeholder="搜索政策，如“创业补贴”" enterkeyhint="search">
                     <button type="button" onclick="filterCollection()">搜索</button>

@@ -122,7 +122,7 @@ button, input { font: inherit; color: inherit; }
 .g-item[data-cat="biz"] .g-seal::after { border-color: rgba(255, 255, 255, .5); }
 .g-item[data-cat="biz"] .g-seal svg .fill { fill: rgba(255, 255, 255, .25); }
 .g-item[data-cat="biz"] b { color: var(--red); }
-.g-motto { flex: none; text-align: center; margin-top: clamp(10px, 2vh, 18px); font-family: var(--serif); font-size: 13px; color: var(--muted); letter-spacing: .45em; padding-left: .45em; }
+.g-motto { flex: none; text-align: center; margin-top: clamp(8px, 1.6vh, 14px); font-family: var(--serif); font-size: 13px; color: var(--muted); letter-spacing: .45em; padding-left: .45em; }
 .g-foot { flex: none; height: clamp(54px, 8vh, 66px); background: url(banner.png) center / cover no-repeat; }
 
 /* ============================================
@@ -375,3 +375,13 @@ button, input { font: inherit; color: inherit; }
     body { background: linear-gradient(180deg, #F3F6F9 0%, #E2E9F1 100%); background-attachment: fixed; }
     #app { border-radius: 14px; }
 }
+
+/* 首页：全文 PDF 下载 */
+.g-dl { flex: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: clamp(12px, 2.2vh, 18px); }
+.g-dl a {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 10px 6px;
+    background: #fff; border: 1px solid #C9D6E3; border-radius: 6px;
+    font-family: var(--serif); font-size: 14.5px; font-weight: 700; color: var(--blue); letter-spacing: .04em;
+}
+.g-dl a:active { background: var(--tint); }
