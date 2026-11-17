@@ -4096,7 +4096,6 @@ function renderQAList(categoryId) {
                 <!-- 头部 Banner（带背景图、logo、标题） -->
                 <div class="subpage-header-banner">
                     <div class="subpage-logo-container">
-                        <img src="logo.png" alt="Logo" class="subpage-logo" onerror="this.style.display='none'">
                     </div>
                     <div class="subpage-title-container">
                         <div class="subpage-main-title">${escapeHtml(category.name)}</div>
@@ -4220,7 +4219,6 @@ function renderCollectionList() {
                 <!-- 头部 Banner（带背景图、logo、标题） -->
                 <div class="subpage-header-banner">
                     <div class="subpage-logo-container">
-                        <img src="logo.png" alt="Logo" class="subpage-logo" onerror="this.style.display='none'">
                     </div>
                     <div class="subpage-title-container">
                         <div class="subpage-main-title">返乡创业政策汇编</div>
