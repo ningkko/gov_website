@@ -3978,28 +3978,12 @@ function render() {
 // ============================================
 function renderHome() {
     const pageHtml = `
-        <div class="page home-v3">
-            <header class="hv-head">
-                <img src="title_blue.png" alt="内江市农民工服务保障" class="hv-logo">
-                <h1 class="hv-title">电子政策包</h1>
-                <p class="hv-en">Policy Handbook 2026</p>
-            </header>
-
-            <!-- 九宫格入口 -->
-            <nav class="hv-grid">
-                    <a href="#/qa/employment" class="hv-item" data-cat="job"><span class="hv-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2" class="fill"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/><path d="M11 13v2h2v-2"/></svg></span><b>就业服务</b><i>找工作 学技能</i></a>
-                    <a href="#/qa/social-security" class="hv-item" data-cat="ss"><span class="hv-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z" class="fill"/><path d="M12 9v6M9 12h6"/></svg></span><b>社保医保</b><i>社保卡 养老</i></a>
-                    <a href="#/qa/rights-protection" class="hv-item" data-cat="law"><span class="hv-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7l-3 6a3 3 0 0 0 6 0z" class="fill"/><path d="M19 7l-3 6a3 3 0 0 0 6 0z" class="fill"/><path d="M12 4v16M7 20h10M5 7h14"/></svg></span><b>维权服务</b><i>讨薪 仲裁</i></a>
-                    <a href="#/qa/children-education" class="hv-item" data-cat="edu"><span class="hv-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z" class="fill"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></svg></span><b>子女入学</b><i>学位 助学</i></a>
-                    <a href="#/collection" class="hv-item" data-cat="biz"><span class="hv-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c0-4 3-6 7-6 0 4-3 6-7 6z" class="fill"/><path d="M12 15c0-3-2.5-5-6-5 0 3 2.5 5 6 5z" class="fill"/><path d="M12 21v-9"/><path d="M7 21h10"/></svg></span><b>返乡创业</b><i>补贴 贷款</i></a>
-                    <a href="#/qa/certificate-license" class="hv-item" data-cat="id"><span class="hv-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2" class="fill"/><circle cx="8" cy="11" r="2"/><path d="M5 16c.5-1.5 1.7-2.5 3-2.5s2.5 1 3 2.5"/><path d="M14 10h5M14 14h4"/></svg></span><b>证照办理</b><i>落户 证件</i></a>
-                    <a href="#/qa/housing" class="hv-item" data-cat="home"><span class="hv-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10v10h14V10l-7-5.4z" class="fill"/><path d="M3 11l9-7 9 7"/><path d="M10 20v-6h4v6"/></svg></span><b>住房保障</b><i>公租房 公积金</i></a>
-                    <a href="#/qa/marriage-fertility" class="hv-item" data-cat="family"><span class="hv-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-8-4.6-8-10.2A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8 2.8C20 15.4 12 20 12 20z" class="fill"/></svg></span><b>婚姻生育</b><i>结婚 生育</i></a>
-                    <a href="#/qa/welfare-subsidy" class="hv-item" data-cat="aid"><span class="hv-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" class="fill"/><path d="M9 7.5l3 4 3-4M12 11.5V17M9 12.5h6M9 15h6"/></svg></span><b>福利补助</b><i>低保 救助</i></a>
-            </nav>
-
-            <footer class="hv-foot">
-                <svg class="hv-sky" viewBox="0 0 390 90" preserveAspectRatio="xMidYMax meet" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round">
+        <div class="page home">
+            <header class="hm-head">
+                <img src="title_blue.png" alt="内江市农民工服务保障" class="hm-logo">
+                <h1 class="hm-title">电子政策包</h1>
+                <p class="hm-sub">2026 年版　用心用情用力　务实服务保障</p>
+                <svg class="hm-sky" viewBox="0 0 390 90" preserveAspectRatio="xMidYMax meet" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round">
                     <path d="M0 88h390"/>
                     <path d="M14 88V58h14v30M18 64h6M18 70h6M18 76h6"/>
                     <path d="M34 88V40l8-6 8 6v48M38 48h8M38 56h8M38 64h8M38 72h8"/>
@@ -4014,14 +3998,26 @@ function renderHome() {
                     <path d="M340 88V64h28v24M336 64h36l-4-6h-28zM342 58h24l-3-6h-18zM345 52h18l-9-8z"/>
                     <path d="M376 88V60h10v28"/>
                 </svg>
-                <p class="hv-credit">内江市民生工作领导小组农民工工作专项工作组　宣<br><span>内 江 市 农 民 工 服 务 中 心</span>　编</p>
-                <svg class="hv-wave" viewBox="0 0 390 70" preserveAspectRatio="none" aria-hidden="true">
-                    <path d="M0 30C70 6 150 10 220 26S340 46 390 20V70H0Z" fill="#DCEAF8"/>
-                    <path d="M0 44C80 22 170 30 240 42S350 52 390 36V70H0Z" fill="#A9C9EC"/>
-                    <path d="M0 54C90 40 180 46 260 54S360 60 390 50V70H0Z" fill="#5B93D3"/>
-                    <path d="M0 50C90 36 180 42 260 50" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1.2"/>
-                </svg>
-            </footer>
+            </header>
+            <svg class="hm-wave" viewBox="0 0 390 44" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0 10C80 -4 160 30 250 18S360 4 390 12V44H0Z" fill="#CFE2F6"/>
+                <path d="M0 22C90 8 180 36 270 26S370 14 390 20V44H0Z" fill="#8DB8E6"/>
+                <path d="M0 32C100 20 190 42 280 34S372 26 390 30V44H0Z" fill="#F2F7FC"/>
+            </svg>
+            <main class="hm-body">
+                <a href="#/collection" class="hm-cap hm-cap--feature" data-cat="biz"><span class="hm-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c0-4 3-6 7-6 0 4-3 6-7 6z" class="fill"/><path d="M12 15c0-3-2.5-5-6-5 0 3 2.5 5 6 5z" class="fill"/><path d="M12 21v-9"/><path d="M7 21h10"/></svg></span><span class="hm-tx"><b>返乡创业</b><i>创业补贴　担保贷款　培训　政策原文</i></span></a>
+                <nav class="hm-grid">
+                    <a href="#/qa/employment" class="hm-cap" data-cat="job"><span class="hm-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2" class="fill"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/><path d="M11 13v2h2v-2"/></svg></span><span class="hm-tx"><b>就业服务</b><i>找工作 学技能</i></span></a>
+                    <a href="#/qa/social-security" class="hm-cap" data-cat="ss"><span class="hm-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z" class="fill"/><path d="M12 9v6M9 12h6"/></svg></span><span class="hm-tx"><b>社保医保</b><i>社保卡 养老</i></span></a>
+                    <a href="#/qa/rights-protection" class="hm-cap" data-cat="law"><span class="hm-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7l-3 6a3 3 0 0 0 6 0z" class="fill"/><path d="M19 7l-3 6a3 3 0 0 0 6 0z" class="fill"/><path d="M12 4v16M7 20h10M5 7h14"/></svg></span><span class="hm-tx"><b>维权服务</b><i>讨薪 仲裁</i></span></a>
+                    <a href="#/qa/children-education" class="hm-cap" data-cat="edu"><span class="hm-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z" class="fill"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></svg></span><span class="hm-tx"><b>子女入学</b><i>学位 助学</i></span></a>
+                    <a href="#/qa/certificate-license" class="hm-cap" data-cat="id"><span class="hm-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2" class="fill"/><circle cx="8" cy="11" r="2"/><path d="M5 16c.5-1.5 1.7-2.5 3-2.5s2.5 1 3 2.5"/><path d="M14 10h5M14 14h4"/></svg></span><span class="hm-tx"><b>证照办理</b><i>落户 证件</i></span></a>
+                    <a href="#/qa/housing" class="hm-cap" data-cat="home"><span class="hm-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10v10h14V10l-7-5.4z" class="fill"/><path d="M3 11l9-7 9 7"/><path d="M10 20v-6h4v6"/></svg></span><span class="hm-tx"><b>住房保障</b><i>公租房 公积金</i></span></a>
+                    <a href="#/qa/marriage-fertility" class="hm-cap" data-cat="family"><span class="hm-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-8-4.6-8-10.2A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8 2.8C20 15.4 12 20 12 20z" class="fill"/></svg></span><span class="hm-tx"><b>婚姻生育</b><i>结婚 生育</i></span></a>
+                    <a href="#/qa/welfare-subsidy" class="hm-cap" data-cat="aid"><span class="hm-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" class="fill"/><path d="M9 7.5l3 4 3-4M12 11.5V17M9 12.5h6M9 15h6"/></svg></span><span class="hm-tx"><b>福利补助</b><i>低保 救助</i></span></a>
+                </nav>
+            </main>
+            <footer class="hm-foot">内江市民生工作领导小组农民工工作专项工作组　宣<br>内江市农民工服务中心　编</footer>
 
             <!-- 阅读须知弹窗（打开主页时显示） -->
             <div id="disclaimer-modal-overlay" class="disclaimer-modal-overlay">
@@ -4063,91 +4059,54 @@ function renderHome() {
 // ============================================
 // 政策问答列表视图
 // ============================================
+// 子页面公共部件
+function subHeader(title, backHash) {
+    return `
+            <header class="sp-head">
+                <a class="sp-back" href="${backHash}" aria-label="返回">‹</a>
+                <div class="sp-head-title">${escapeHtml(title)}</div>
+                <a class="sp-home" href="#/home" aria-label="首页"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg></a>
+            </header>`;
+}
+function listCard(href, number, text) {
+    return `<a href="${href}" class="sp-card"><span class="sp-num">${number}</span><span class="sp-card-text">${escapeHtml(text)}</span><span class="sp-chev">›</span></a>`;
+}
+function bindSearch(fn) {
+    document.getElementById('search-input').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') fn();
+    });
+}
+
 function renderQAList(categoryId) {
     const category = qaCategories.find(c => c.id === categoryId);
     if (!category) {
         renderHome();
         return;
     }
-
     const items = qaItems.filter(q => q.categoryId === categoryId);
+    const cards = list => list.map((item, i) => listCard(`#/qa-detail/${item.id}`, i + 1, item.question)).join('');
 
-    // 索引编号：按顺序编号 1, 2, 3...
-    let itemsHtml = items.map((item, index) => {
-        const number = index + 1;
-        return `
-        <a href="#/qa-detail/${item.id}" class="qa-card">
-            <span class="qa-number-badge">${number}</span>
-            <div class="qa-question-text">${escapeHtml(item.question)}</div>
-            <span class="qa-chevron">›</span>
-        </a>
-    `;
-    }).join('');
-
-    const pageHtml = `
-        <div class="page inner-page">
-            <div class="nav-bar">
-                <div class="nav-bar-back" onclick="window.location.hash = '#/home'">←</div>
-                <div class="nav-bar-title">内江市农民工服务</div>
-                <div class="nav-bar-spacer"></div>
-            </div>
-
-            <div class="page-content">
-                <!-- 头部 Banner（带背景图、logo、标题） -->
-                <div class="subpage-header-banner">
-                    <div class="subpage-logo-container">
-                    </div>
-                    <div class="subpage-title-container">
-                        <div class="subpage-main-title">${escapeHtml(category.name)}</div>
-                    </div>
+    app.innerHTML = `
+        <div class="page sub">
+            ${subHeader('政策问答', '#/home')}
+            <section class="sp-hero">
+                <h1>${escapeHtml(category.name)}</h1>
+                <p>共 ${items.length} 条问答</p>
+                <div class="sp-search">
+                    <input type="search" id="search-input" placeholder="搜索本类问答" enterkeyhint="search">
+                    <button type="button" onclick="filterQA()">搜索</button>
                 </div>
-
-                <!-- 白色卡片容器 -->
-                <div class="subpage-white-card">
-                    <!-- 搜索区 -->
-                    <div class="subpage-search-bar">
-                        <input type="text" id="search-input" placeholder="搜索问答...">
-                        <button onclick="filterQA()">搜索</button>
-                    </div>
-
-                    <!-- 问答列表 -->
-                    <div class="subpage-qa-list" id="qa-list">
-                        ${itemsHtml}
-                    </div>
-                </div>
-            </div>
+            </section>
+            <main class="sp-list" id="qa-list">${cards(items)}</main>
         </div>
     `;
 
-    app.innerHTML = pageHtml;
-
-    // 添加搜索功能
     window.filterQA = function() {
-        const searchKeyword = document.getElementById('search-input').value.toLowerCase();
-        const qaList = document.getElementById('qa-list');
-        const filteredItems = items.filter(item => 
-            item.question.toLowerCase().includes(searchKeyword) ||
-            item.answer.toLowerCase().includes(searchKeyword)
-        );
-        qaList.innerHTML = filteredItems
-            .map((item, index) => {
-                const number = index + 1;
-                return `
-                <a href="#/qa-detail/${item.id}" class="qa-card">
-                    <span class="qa-number-badge">${number}</span>
-                    <div class="qa-question-text">${escapeHtml(item.question)}</div>
-                    <span class="qa-chevron">›</span>
-                </a>
-            `;
-            }).join('');
+        const kw = document.getElementById('search-input').value.trim().toLowerCase();
+        const found = items.filter(item => item.question.toLowerCase().includes(kw) || item.answer.toLowerCase().includes(kw));
+        document.getElementById('qa-list').innerHTML = found.length ? cards(found) : '<p class="sp-empty">没有找到相关问答，换个词试试。</p>';
     };
-
-    // 支持回车搜索
-    document.getElementById('search-input').addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            window.filterQA();
-        }
-    });
+    bindSearch(window.filterQA);
 }
 
 // ============================================
@@ -4159,123 +4118,66 @@ function renderQADetail(qaId) {
         renderHome();
         return;
     }
-
     const category = qaCategories.find(c => c.id === qa.categoryId);
+    const list = qaItems.filter(q => q.categoryId === qa.categoryId);
+    const idx = list.indexOf(qa);
+    const prev = list[idx - 1], next = list[idx + 1];
 
-    const pageHtml = `
-        <div class="page">
-            <div class="nav-bar">
-                <div class="nav-bar-back" onclick="window.location.hash = '#/home'">←</div>
-                <div class="nav-bar-title">政策问答详情</div>
-                <div class="nav-bar-spacer"></div>
-            </div>
-
-            <div class="qa-detail-container" style="max-height: calc(100vh - 56px); overflow-y: auto; -webkit-overflow-scrolling: touch;">
-                <div class="qa-question-section">
-                    <div class="qa-question-label">问题</div>
-                    <div class="qa-question-text">${escapeHtml(qa.question)}</div>
-                </div>
-
-                <div class="qa-answer-section">
-                    <div class="qa-answer-label">答案</div>
-                    <div class="qa-answer-text qa-answer-body">${formatContentWithTables(qa.answer)}</div>
-                </div>
-
-                <div class="action-buttons">
-                    <a href="#/qa/${qa.categoryId}" class="btn btn-secondary">返回列表</a>
-                </div>
-            </div>
+    app.innerHTML = `
+        <div class="page sub">
+            ${subHeader(category ? category.name : '政策问答', `#/qa/${qa.categoryId}`)}
+            <main class="sp-detail">
+                <section class="sp-q">
+                    <span class="sp-badge">问</span>
+                    <h1>${escapeHtml(qa.question)}</h1>
+                </section>
+                <section class="sp-a">
+                    <span class="sp-badge sp-badge--a">答</span>
+                    <div class="sp-content">${formatContentWithTables(qa.answer)}</div>
+                </section>
+                <nav class="sp-pager">
+                    ${prev ? `<a href="#/qa-detail/${prev.id}">‹ 上一条</a>` : '<span></span>'}
+                    <a href="#/qa/${qa.categoryId}" class="sp-pager-mid">返回列表</a>
+                    ${next ? `<a href="#/qa-detail/${next.id}">下一条 ›</a>` : '<span></span>'}
+                </nav>
+            </main>
         </div>
     `;
-
-    app.innerHTML = pageHtml;
 }
 
 // ============================================
 // 政策汇编列表视图
 // ============================================
 function renderCollectionList() {
-    // 索引编号：按顺序编号 1, 2, 3...
-    let itemsHtml = collectionItems.map((item, index) => {
-        const number = index + 1;
-        return `
-        <a href="#/collection-detail/${item.id}" class="qa-card">
-            <span class="qa-number-badge">${number}</span>
-            <div class="qa-question-text">${escapeHtml(item.title)}</div>
-            <span class="qa-chevron">›</span>
-        </a>
-    `;
-    }).join('');
+    const cards = list => list.map((item, i) => listCard(`#/collection-detail/${item.id}`, i + 1, item.title)).join('');
+    const docs = `
+                <div class="policy-docs">
+                    <div class="policy-docs-title">政策原文</div>
+                    ${policyDocs.map(d => `<a class="pdf-link" href="${d.file}" target="_blank" rel="noopener"><span class="pdf-link-tag">PDF</span><span class="pdf-link-text">${escapeHtml(d.title)}<small>${escapeHtml(d.no)}</small></span></a>`).join('')}
+                </div>`;
 
-    const pageHtml = `
-        <div class="page inner-page">
-            <div class="nav-bar">
-                <div class="nav-bar-back" onclick="window.location.hash = '#/home'">←</div>
-                <div class="nav-bar-title">内江市农民工服务</div>
-                <div class="nav-bar-spacer"></div>
-            </div>
-
-            <div class="page-content">
-                <!-- 头部 Banner（带背景图、logo、标题） -->
-                <div class="subpage-header-banner">
-                    <div class="subpage-logo-container">
-                    </div>
-                    <div class="subpage-title-container">
-                        <div class="subpage-main-title">返乡创业政策汇编</div>
-                    </div>
+    app.innerHTML = `
+        <div class="page sub">
+            ${subHeader('返乡创业', '#/home')}
+            <section class="sp-hero">
+                <h1>返乡下乡创业政策汇编</h1>
+                <p>共 ${collectionItems.length} 项政策　另附政策原文 ${policyDocs.length} 份</p>
+                <div class="sp-search">
+                    <input type="search" id="search-input" placeholder="搜索政策，如“创业补贴”" enterkeyhint="search">
+                    <button type="button" onclick="filterCollection()">搜索</button>
                 </div>
-
-                <!-- 白色卡片容器 -->
-                <div class="subpage-white-card">
-                    <!-- 搜索区 -->
-                    <div class="subpage-search-bar">
-                        <input type="text" id="search-input" placeholder="搜索政策...">
-                        <button onclick="filterCollection()">搜索</button>
-                    </div>
-
-                    <!-- 政策列表 -->
-                    <div class="subpage-qa-list" id="collection-list">
-                        ${itemsHtml}
-                        <!-- 政策原文（PDF） -->
-                        <div class="policy-docs">
-                            <div class="policy-docs-title">政策原文</div>
-                            ${policyDocs.map(d => `<a class="pdf-link" href="${d.file}" target="_blank" rel="noopener"><span class="pdf-link-tag">PDF</span><span class="pdf-link-text">${escapeHtml(d.title)}<small>${escapeHtml(d.no)}</small></span></a>`).join('')}
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </section>
+            <main class="sp-list" id="collection-list">${cards(collectionItems)}${docs}</main>
         </div>
     `;
 
-    app.innerHTML = pageHtml;
-
-    // 添加搜索功能
     window.filterCollection = function() {
-        const searchKeyword = document.getElementById('search-input').value.toLowerCase();
-        const collectionList = document.getElementById('collection-list');
-        const filteredItems = collectionItems.filter(item => 
-            item.title.toLowerCase().includes(searchKeyword) ||
-            item.content.toLowerCase().includes(searchKeyword)
-        );
-        collectionList.innerHTML = filteredItems
-            .map((item, index) => {
-                const number = index + 1;
-                return `
-                <a href="#/collection-detail/${item.id}" class="qa-card">
-                    <span class="qa-number-badge">${number}</span>
-                    <div class="qa-question-text">${escapeHtml(item.title)}</div>
-                    <span class="qa-chevron">›</span>
-                </a>
-            `;
-            }).join('');
+        const kw = document.getElementById('search-input').value.trim().toLowerCase();
+        if (!kw) { document.getElementById('collection-list').innerHTML = cards(collectionItems) + docs; return; }
+        const found = collectionItems.filter(item => item.title.toLowerCase().includes(kw) || item.content.toLowerCase().includes(kw));
+        document.getElementById('collection-list').innerHTML = found.length ? cards(found) : '<p class="sp-empty">没有找到相关政策，换个词试试。</p>';
     };
-
-    // 支持回车搜索
-    document.getElementById('search-input').addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            window.filterCollection();
-        }
-    });
+    bindSearch(window.filterCollection);
 }
 
 // ============================================
@@ -4287,32 +4189,28 @@ function renderCollectionDetail(docId) {
         renderCollectionList();
         return;
     }
+    const idx = collectionItems.indexOf(doc);
+    const prev = collectionItems[idx - 1], next = collectionItems[idx + 1];
 
-    const pageHtml = `
-        <div class="page">
-            <div class="nav-bar">
-                <div class="nav-bar-back" onclick="window.location.hash = '#/home'">←</div>
-                <div class="nav-bar-title">${escapeHtml(doc.title.substring(0, 20))}...</div>
-                <div class="nav-bar-spacer"></div>
-            </div>
-
-            <div class="collection-detail-container">
-                <div class="collection-detail-title">${escapeHtml(doc.title)}</div>
-                <div class="collection-detail-meta">
-                    <div>${escapeHtml(doc.source)}</div>
-                </div>
-
-
-                <div class="collection-detail-content">${formatContentWithTables(doc.content)}</div>
-
-                <div class="action-buttons">
-                    <a href="#/collection" class="btn btn-secondary">返回汇编</a>
-                </div>
-            </div>
+    app.innerHTML = `
+        <div class="page sub">
+            ${subHeader('政策汇编', '#/collection')}
+            <main class="sp-detail">
+                <section class="sp-doc-head">
+                    <h1>${escapeHtml(doc.title)}</h1>
+                    <p>${escapeHtml(doc.source)}</p>
+                </section>
+                <section class="sp-a sp-a--doc">
+                    <div class="sp-content">${formatContentWithTables(doc.content)}</div>
+                </section>
+                <nav class="sp-pager">
+                    ${prev ? `<a href="#/collection-detail/${prev.id}">‹ 上一项</a>` : '<span></span>'}
+                    <a href="#/collection" class="sp-pager-mid">返回汇编</a>
+                    ${next ? `<a href="#/collection-detail/${next.id}">下一项 ›</a>` : '<span></span>'}
+                </nav>
+            </main>
         </div>
     `;
-
-    app.innerHTML = pageHtml;
 }
 
 // ============================================
