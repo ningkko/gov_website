@@ -3978,46 +3978,27 @@ function render() {
 // ============================================
 function renderHome() {
     const pageHtml = `
-        <div class="page home">
-            <header class="hm-head">
-                <img src="title_blue.png" alt="内江市农民工服务保障" class="hm-logo">
-                <h1 class="hm-title">电子政策包</h1>
-                <p class="hm-sub">2026 年版　用心用情用力　务实服务保障</p>
-                <svg class="hm-sky" viewBox="0 0 390 90" preserveAspectRatio="xMidYMax meet" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round">
-                    <path d="M0 88h390"/>
-                    <path d="M14 88V58h14v30M18 64h6M18 70h6M18 76h6"/>
-                    <path d="M34 88V40l8-6 8 6v48M38 48h8M38 56h8M38 64h8M38 72h8"/>
-                    <path d="M58 88V30l3-12 3 12v58M58 30h6"/>
-                    <path d="M72 88V52h18v36M76 58h4M82 58h4M76 66h4M82 66h4"/>
-                    <path d="M98 88L120 52l22 36M108 88l12-20 12 20"/>
-                    <path d="M150 88V26h16v62M154 34h8M154 42h8M154 50h8M154 58h8M154 66h8M150 26l8-8 8 8"/>
-                    <path d="M172 88V46h12v42M184 88V60h14v28"/>
-                    <path d="M206 88c0-34 22-46 40-46s40 12 40 46M216 88c0-24 14-36 30-36s30 12 30 36M246 42v-6"/>
-                    <path d="M292 88V36h12v52M296 44h4M296 52h4M296 60h4M296 68h4"/>
-                    <path d="M312 88V56h14v32"/>
-                    <path d="M340 88V64h28v24M336 64h36l-4-6h-28zM342 58h24l-3-6h-18zM345 52h18l-9-8z"/>
-                    <path d="M376 88V60h10v28"/>
-                </svg>
-            </header>
-            <svg class="hm-wave" viewBox="0 0 390 44" preserveAspectRatio="none" aria-hidden="true">
-                <path d="M0 10C80 -4 160 30 250 18S360 4 390 12V44H0Z" fill="#CFE2F6"/>
-                <path d="M0 22C90 8 180 36 270 26S370 14 390 20V44H0Z" fill="#8DB8E6"/>
-                <path d="M0 32C100 20 190 42 280 34S372 26 390 30V44H0Z" fill="#F2F7FC"/>
-            </svg>
-            <main class="hm-body">
-                <a href="#/collection" class="hm-cap hm-cap--feature" data-cat="biz"><span class="hm-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c0-4 3-6 7-6 0 4-3 6-7 6z" class="fill"/><path d="M12 15c0-3-2.5-5-6-5 0 3 2.5 5 6 5z" class="fill"/><path d="M12 21v-9"/><path d="M7 21h10"/></svg></span><span class="hm-tx"><b>返乡创业</b><i>创业补贴　担保贷款　培训　政策原文</i></span></a>
-                <nav class="hm-grid">
-                    <a href="#/qa/employment" class="hm-cap" data-cat="job"><span class="hm-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2" class="fill"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/><path d="M11 13v2h2v-2"/></svg></span><span class="hm-tx"><b>就业服务</b><i>找工作 学技能</i></span></a>
-                    <a href="#/qa/social-security" class="hm-cap" data-cat="ss"><span class="hm-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z" class="fill"/><path d="M12 9v6M9 12h6"/></svg></span><span class="hm-tx"><b>社保医保</b><i>社保卡 养老</i></span></a>
-                    <a href="#/qa/rights-protection" class="hm-cap" data-cat="law"><span class="hm-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7l-3 6a3 3 0 0 0 6 0z" class="fill"/><path d="M19 7l-3 6a3 3 0 0 0 6 0z" class="fill"/><path d="M12 4v16M7 20h10M5 7h14"/></svg></span><span class="hm-tx"><b>维权服务</b><i>讨薪 仲裁</i></span></a>
-                    <a href="#/qa/children-education" class="hm-cap" data-cat="edu"><span class="hm-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z" class="fill"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></svg></span><span class="hm-tx"><b>子女入学</b><i>学位 助学</i></span></a>
-                    <a href="#/qa/certificate-license" class="hm-cap" data-cat="id"><span class="hm-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2" class="fill"/><circle cx="8" cy="11" r="2"/><path d="M5 16c.5-1.5 1.7-2.5 3-2.5s2.5 1 3 2.5"/><path d="M14 10h5M14 14h4"/></svg></span><span class="hm-tx"><b>证照办理</b><i>落户 证件</i></span></a>
-                    <a href="#/qa/housing" class="hm-cap" data-cat="home"><span class="hm-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10v10h14V10l-7-5.4z" class="fill"/><path d="M3 11l9-7 9 7"/><path d="M10 20v-6h4v6"/></svg></span><span class="hm-tx"><b>住房保障</b><i>公租房 公积金</i></span></a>
-                    <a href="#/qa/marriage-fertility" class="hm-cap" data-cat="family"><span class="hm-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-8-4.6-8-10.2A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8 2.8C20 15.4 12 20 12 20z" class="fill"/></svg></span><span class="hm-tx"><b>婚姻生育</b><i>结婚 生育</i></span></a>
-                    <a href="#/qa/welfare-subsidy" class="hm-cap" data-cat="aid"><span class="hm-ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" class="fill"/><path d="M9 7.5l3 4 3-4M12 11.5V17M9 12.5h6M9 15h6"/></svg></span><span class="hm-tx"><b>福利补助</b><i>低保 救助</i></span></a>
-                </nav>
+        <div class="page home g-home">
+            <img src="home_title.png" alt="内江市农民工服务保障 用心用情用力 务实服务保障 倾心倾情倾力 深耕返乡创业" class="g-banner">
+            <main class="g-main">
+                <section class="g-frame">
+                    <svg class="g-corner g-tl" viewBox="0 0 26 26" aria-hidden="true"><path d="M1 25V1h24M6 25V6h19M11 25V11h14" fill="none" stroke="currentColor" stroke-width="2"/></svg><svg class="g-corner g-tr" viewBox="0 0 26 26" aria-hidden="true"><path d="M1 25V1h24M6 25V6h19M11 25V11h14" fill="none" stroke="currentColor" stroke-width="2"/></svg><svg class="g-corner g-bl" viewBox="0 0 26 26" aria-hidden="true"><path d="M1 25V1h24M6 25V6h19M11 25V11h14" fill="none" stroke="currentColor" stroke-width="2"/></svg><svg class="g-corner g-br" viewBox="0 0 26 26" aria-hidden="true"><path d="M1 25V1h24M6 25V6h19M11 25V11h14" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                    <h1 class="g-ttl">便民服务</h1>
+                    <nav class="g-grid">
+                    <a href="#/qa/employment" class="g-item" data-cat="job"><span class="g-seal"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2" class="fill"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/><path d="M11 13v2h2v-2"/></svg></span><b>就业服务</b></a>
+                    <a href="#/qa/social-security" class="g-item" data-cat="ss"><span class="g-seal"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z" class="fill"/><path d="M12 9v6M9 12h6"/></svg></span><b>社保医保</b></a>
+                    <a href="#/qa/rights-protection" class="g-item" data-cat="law"><span class="g-seal"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7l-3 6a3 3 0 0 0 6 0z" class="fill"/><path d="M19 7l-3 6a3 3 0 0 0 6 0z" class="fill"/><path d="M12 4v16M7 20h10M5 7h14"/></svg></span><b>维权服务</b></a>
+                    <a href="#/qa/children-education" class="g-item" data-cat="edu"><span class="g-seal"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z" class="fill"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></svg></span><b>子女入学</b></a>
+                    <a href="#/collection" class="g-item" data-cat="biz"><span class="g-seal"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c0-4 3-6 7-6 0 4-3 6-7 6z" class="fill"/><path d="M12 15c0-3-2.5-5-6-5 0 3 2.5 5 6 5z" class="fill"/><path d="M12 21v-9"/><path d="M7 21h10"/></svg></span><b>返乡创业</b></a>
+                    <a href="#/qa/certificate-license" class="g-item" data-cat="id"><span class="g-seal"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2" class="fill"/><circle cx="8" cy="11" r="2"/><path d="M5 16c.5-1.5 1.7-2.5 3-2.5s2.5 1 3 2.5"/><path d="M14 10h5M14 14h4"/></svg></span><b>证照办理</b></a>
+                    <a href="#/qa/housing" class="g-item" data-cat="home"><span class="g-seal"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10v10h14V10l-7-5.4z" class="fill"/><path d="M3 11l9-7 9 7"/><path d="M10 20v-6h4v6"/></svg></span><b>住房保障</b></a>
+                    <a href="#/qa/marriage-fertility" class="g-item" data-cat="family"><span class="g-seal"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-8-4.6-8-10.2A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8 2.8C20 15.4 12 20 12 20z" class="fill"/></svg></span><b>婚姻生育</b></a>
+                    <a href="#/qa/welfare-subsidy" class="g-item" data-cat="aid"><span class="g-seal"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" class="fill"/><path d="M9 7.5l3 4 3-4M12 11.5V17M9 12.5h6M9 15h6"/></svg></span><b>福利补助</b></a>
+                    </nav>
+                </section>
+                <p class="g-motto">为农民工办实事</p>
             </main>
-            <footer class="hm-foot">内江市民生工作领导小组农民工工作专项工作组　宣<br>内江市农民工服务中心　编</footer>
+            <footer class="g-foot" aria-label="内江市民生工作领导小组农民工工作专项工作组 宣　内江市农民工服务中心 编"></footer>
 
             <!-- 阅读须知弹窗（打开主页时显示） -->
             <div id="disclaimer-modal-overlay" class="disclaimer-modal-overlay">

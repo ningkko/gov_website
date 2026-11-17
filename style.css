@@ -4,19 +4,20 @@
    ============================================ */
 
 :root {
-    --blue: #1A56A6;        /* 封面标题蓝 */
-    --blue-2: #2F72C4;
-    --blue-3: #5B93D3;
-    --ink: #16345F;         /* 正文深蓝 */
-    --muted: #6E87A8;
-    --line: #DCE8F5;
-    --tint: #EAF2FC;
-    --bg: #F2F7FC;
+    --blue: #1E4E8C;        /* 藏青（印章、边框） */
+    --blue-2: #2C62A8;
+    --blue-3: #5D86BE;
+    --ink: #1D2B3A;         /* 正文深蓝 */
+    --muted: #6B7C8E;
+    --line: #D3DEE9;
+    --tint: #EDF2F8;
+    --bg: #F4F7F9;
     --card: #FFFFFF;
-    --red: #D64032;
+    --red: #B8231E;
     --app-w: 440px;
-    --radius: 18px;
-    --shadow: 0 6px 18px -12px rgba(26, 86, 166, 0.45);
+    --radius: 10px;
+    --shadow: 0 4px 12px -8px rgba(30, 78, 140, 0.35);
+    --serif: "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
     --font: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
 }
 
@@ -63,117 +64,66 @@ button, input { font: inherit; color: inherit; }
 .page { min-height: inherit; display: flex; flex-direction: column; }
 
 /* ============================================
-   首页
+   首页（方案 G：水墨标题 + 回纹边框 + 印章图标）
    ============================================ */
-.page.home {
-    height: 100vh;
-    height: 100dvh;
-    overflow: hidden;
-}
+.page.home { height: 100vh; height: 100dvh; overflow: hidden; background: var(--bg); }
 @media (min-width: 600px) { .page.home { height: calc(100dvh - 48px); } }
-
-.hm-head {
+.g-banner { display: block; flex: none; width: 100%; height: auto; }
+.g-main { flex: 1; min-height: 0; display: flex; flex-direction: column; padding: clamp(18px, 3.4vh, 30px) 16px clamp(8px, 1.6vh, 14px); }
+.g-frame {
     position: relative;
-    flex: none;
-    text-align: center;
-    padding: clamp(20px, 4.4vh, 40px) 18px 0;
-    background: linear-gradient(180deg, #FFFFFF 0%, #EEF5FC 60%, #DCEAF8 100%);
-    overflow: hidden;
-}
-.hm-logo { display: block; width: min(78%, 330px); margin: 0 auto; }
-.hm-title {
-    margin-top: clamp(10px, 2vh, 18px);
-    font-size: clamp(30px, 8.8vw, 38px);
-    font-weight: 900;
-    letter-spacing: .14em;
-    padding-left: .14em;
-    color: var(--blue);
-    line-height: 1.15;
-}
-.hm-sub { margin-top: 6px; font-size: 12.5px; color: var(--blue-2); letter-spacing: .12em; }
-.hm-sky { display: block; width: 100%; height: clamp(34px, 6vh, 52px); margin-top: clamp(6px, 1.4vh, 12px); color: #8FB3DD; opacity: .8; }
-.hm-wave { display: block; flex: none; width: 100%; height: 34px; margin-top: -26px; position: relative; }
-
-.hm-body {
     flex: 1;
     min-height: 0;
     display: flex;
     flex-direction: column;
-    gap: clamp(8px, 1.4vh, 12px);
-    padding: 2px 14px clamp(6px, 1.2vh, 12px);
-    justify-content: space-evenly;
+    padding: clamp(26px, 4.4vh, 38px) 10px clamp(14px, 2.6vh, 24px);
+    background: #fff;
+    border: 1px solid #C9D6E3;
 }
-.hm-grid {
+.g-frame::before { content: ""; position: absolute; inset: 5px; border: 1px solid var(--blue); pointer-events: none; }
+.g-corner { position: absolute; width: 26px; height: 26px; color: var(--blue); }
+.g-tl { left: -1px; top: -1px; }
+.g-tr { right: -1px; top: -1px; transform: scaleX(-1); }
+.g-bl { left: -1px; bottom: -1px; transform: scaleY(-1); }
+.g-br { right: -1px; bottom: -1px; transform: scale(-1); }
+.g-ttl {
+    position: absolute; z-index: 2; left: 50%; top: -16px; transform: translateX(-50%);
+    background: var(--blue); color: #fff;
+    font-family: var(--serif); font-size: 16px; font-weight: 700;
+    letter-spacing: .5em; padding: 5px 10px 5px 18px; white-space: nowrap;
+}
+.g-grid {
     flex: 1;
     min-height: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, minmax(0, 72px));
-    align-content: space-evenly;
-    gap: clamp(8px, 1.4vh, 12px) 10px;
-}
-.hm-cap {
-    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(0, 1fr));
     align-items: center;
-    gap: 10px;
-    min-height: 0;
-    min-width: 0;
-    padding: 8px 12px 8px 9px;
-    background: var(--card);
-    border-radius: 999px;
-    box-shadow: var(--shadow);
-    border: 1px solid rgba(47, 114, 196, .08);
+}
+.g-item { display: flex; flex-direction: column; align-items: center; gap: clamp(7px, 1.2vh, 12px); padding: 4px 0; }
+.g-item:focus-visible { outline: 3px solid var(--blue-3); outline-offset: 4px; }
+.g-seal {
+    position: relative;
+    width: clamp(56px, 8.4vh, 68px);
+    height: clamp(56px, 8.4vh, 68px);
+    display: grid; place-items: center;
+    color: var(--blue);
+    background: #F7FAFD;
+    border: 1.5px solid var(--blue);
+    border-radius: 10px;
     transition: transform .15s ease;
 }
-.hm-cap:active { transform: scale(.97); }
-.hm-cap:focus-visible, .sp-card:focus-visible, .sp-back:focus-visible, .sp-home:focus-visible { outline: 3px solid var(--blue-3); outline-offset: 2px; }
-.hm-ic {
-    flex: none;
-    width: clamp(40px, 6vh, 48px);
-    height: clamp(40px, 6vh, 48px);
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    color: #fff;
-    background: linear-gradient(150deg, var(--blue-3) 0%, var(--blue) 100%);
-}
-.hm-ic svg { width: 54%; height: 54%; stroke-width: 1.8; }
-.hm-ic svg .fill { fill: rgba(255, 255, 255, .22); }
-.hm-tx { min-width: 0; }
-.hm-tx b { display: block; font-size: clamp(15px, 4.3vw, 17px); font-weight: 700; letter-spacing: .04em; line-height: 1.3; }
-.hm-tx i { display: block; font-style: normal; font-size: 12px; color: var(--muted); margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-
-.hm-cap--feature {
-    flex: none;
-    border-radius: 22px;
-    padding: clamp(10px, 1.8vh, 16px) 16px clamp(10px, 1.8vh, 16px) 12px;
-    background: linear-gradient(110deg, var(--blue) 0%, var(--blue-2) 60%, #4E8AD3 100%);
-    border: 0;
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-}
-.hm-cap--feature::after {
-    content: "";
-    position: absolute;
-    right: -20px; top: -40px;
-    width: 150px; height: 150px;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, .22);
-    box-shadow: 0 0 0 18px rgba(255, 255, 255, .05);
-}
-.hm-cap--feature .hm-ic { width: clamp(46px, 7vh, 54px); height: clamp(46px, 7vh, 54px); background: rgba(255, 255, 255, .18); }
-.hm-cap--feature .hm-tx b { font-size: clamp(18px, 5vw, 20px); letter-spacing: .08em; }
-.hm-cap--feature .hm-tx i { color: #D9E8FA; white-space: normal; }
-
-.hm-foot {
-    flex: none;
-    text-align: center;
-    font-size: 11px;
-    line-height: 1.7;
-    color: var(--muted);
-    padding: 2px 0 clamp(10px, 2vh, 16px);
-}
+.g-seal::after { content: ""; position: absolute; inset: 3px; border: 1px solid rgba(30, 78, 140, .35); border-radius: 7px; }
+.g-seal svg { width: 46%; height: 46%; stroke-width: 1.7; }
+.g-seal svg .fill { fill: #DCE7F3; }
+.g-item:active .g-seal { transform: scale(.94); }
+.g-item b { font-family: var(--serif); font-size: clamp(15px, 4.3vw, 17px); font-weight: 700; letter-spacing: .12em; padding-left: .12em; color: var(--ink); }
+.g-item[data-cat="biz"] .g-seal { background: var(--red); border-color: var(--red); color: #fff; }
+.g-item[data-cat="biz"] .g-seal::after { border-color: rgba(255, 255, 255, .5); }
+.g-item[data-cat="biz"] .g-seal svg .fill { fill: rgba(255, 255, 255, .25); }
+.g-item[data-cat="biz"] b { color: var(--red); }
+.g-motto { flex: none; text-align: center; margin-top: clamp(10px, 2vh, 18px); font-family: var(--serif); font-size: 13px; color: var(--muted); letter-spacing: .45em; padding-left: .45em; }
+.g-foot { flex: none; height: clamp(54px, 8vh, 66px); background: url(banner.png) center / cover no-repeat; }
 
 /* ============================================
    子页面：问答列表 / 详情 / 政策汇编
@@ -393,3 +343,35 @@ button, input { font: inherit; color: inherit; }
 .content-table tr:has(> td:nth-child(2):last-child) td { width: auto; border: 0; padding: 0; }
 .content-table tr:has(> td:nth-child(2):last-child) td::before { display: none; }
 .content-table tr:has(> td:nth-child(2):last-child) td:last-child { flex: none; font-weight: 700; color: var(--blue); }
+
+
+/* ============================================
+   子页面：方案 G 风格（宋体标题、藏青双线、印章徽记）
+   ============================================ */
+.sp-head { border-bottom: 3px double var(--blue); background: rgba(255, 255, 255, .96); }
+.sp-back, .sp-home { border-radius: 8px; background: #fff; border: 1px solid var(--line); }
+.sp-head-title { font-family: var(--serif); letter-spacing: .14em; color: var(--blue); }
+.sp-hero { background: #fff; border-radius: 0; border-bottom: 1px solid var(--line); padding: 22px 18px 18px; }
+.sp-hero h1 { font-family: var(--serif); font-weight: 900; color: var(--blue); letter-spacing: .1em; display: flex; align-items: center; gap: 10px; }
+.sp-hero h1::before { content: ""; flex: none; width: 6px; height: 26px; background: var(--red); }
+.sp-search { border-radius: 8px; border: 1px solid #C9D6E3; box-shadow: none; padding: 3px 3px 3px 14px; }
+.sp-search button { border-radius: 6px; }
+.sp-card { border-radius: 10px; border: 1px solid #E1E8F0; box-shadow: none; }
+.sp-num { border-radius: 6px; background: #fff; border: 1.5px solid var(--blue); color: var(--blue); font-family: var(--serif); }
+.sp-q { background: #fff; color: var(--ink); border: 1px solid #C9D6E3; box-shadow: inset 0 0 0 4px #fff, inset 0 0 0 5px var(--blue); padding: 20px 20px 20px 60px; }
+.sp-q h1 { font-family: var(--serif); font-size: 19px; color: var(--blue); }
+.sp-badge { border-radius: 6px; background: var(--red); color: #fff; font-family: var(--serif); left: 18px; top: 19px; }
+.sp-badge--a { background: var(--blue); color: #fff; }
+.sp-a { box-shadow: none; border: 1px solid #E1E8F0; }
+.sp-doc-head h1 { font-family: var(--serif); color: var(--blue); }
+.sp-pager .sp-pager-mid { border-radius: 6px; font-family: var(--serif); letter-spacing: .2em; padding: 11px 22px 11px 26px; }
+.content-para strong { color: var(--blue); }
+.pdf-link { box-shadow: none; border-radius: 10px; }
+.policy-docs-title { font-family: var(--serif); border-left-color: var(--red); }
+.disclaimer-modal { border-radius: 10px; border-top-color: var(--blue); }
+.disclaimer-modal-title { font-family: var(--serif); }
+.disclaimer-modal-btn { border-radius: 6px; }
+@media (min-width: 600px) {
+    body { background: linear-gradient(180deg, #F3F6F9 0%, #E2E9F1 100%); background-attachment: fixed; }
+    #app { border-radius: 14px; }
+}
