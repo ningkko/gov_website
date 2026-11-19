@@ -385,3 +385,33 @@ button, input { font: inherit; color: inherit; }
     font-family: var(--serif); font-size: 14.5px; font-weight: 700; color: var(--blue); letter-spacing: .04em;
 }
 .g-dl a:active { background: var(--tint); }
+
+/* 首页：去掉“便民服务”标签后，框顶留白收小 */
+.g-frame { padding-top: clamp(14px, 2.6vh, 24px); }
+
+/* 全站搜索结果 */
+.sp-result-count { font-size: 13px; color: var(--muted); margin: 0 4px 2px; }
+.sp-card-text .sp-tag {
+    display: inline-block; margin-left: 8px; vertical-align: 2px;
+    font-size: 11.5px; font-weight: 600; color: var(--blue);
+    background: var(--tint); border: 1px solid var(--line); border-radius: 4px; padding: 0 6px; line-height: 1.6;
+}
+
+/* 电子书在线阅读：只看不下（禁止长按保存、拖拽、右键） */
+.bk-head { padding: 16px 18px 6px; }
+.bk-pages { padding: 10px 10px 80px; display: flex; flex-direction: column; gap: 10px; }
+.bk-page {
+    position: relative; margin: 0;
+    background: #fff; border: 1px solid var(--line); box-shadow: var(--shadow);
+    -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;
+}
+.bk-page img { display: block; width: 100%; height: auto; pointer-events: none; -webkit-user-drag: none; }
+.bk-shield { position: absolute; inset: 0; }
+.bk-counter {
+    position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); z-index: 20;
+    background: rgba(30, 78, 140, .88); color: #fff;
+    font-size: 13px; font-weight: 700; letter-spacing: .04em;
+    padding: 6px 14px; border-radius: 999px;
+    pointer-events: none;
+}
+@media print { .bk-pages { display: none !important; } }

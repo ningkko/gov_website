@@ -1413,9 +1413,7 @@ const qaItems = [
         question: '申请法律援助的流程是什么？',
         answer: `申请法律援助的流程如下图：
 
-[图片:images/falv-yuanzhu-liucheng.png|法律援助流程图]
-
-[文件:pdf/falv-yuanzhu-liucheng.pdf|下载法律援助流程图（PDF）]`
+[图片:images/falv-yuanzhu-liucheng.png|法律援助流程图]`
     },
     {
         id: 'qa-rights-protection-13',
@@ -2287,12 +2285,15 @@ const qaItems = [
     }
 ];  // 共 238 条问答（来源：2026 年版《政策问答》）
 
-// 政策原文（PDF 扫描件）
-const policyDocs = [
-    { file: 'pdf/renshebu-2025-5.pdf', title: '人力资源社会保障部等7部门关于健全创业支持体系提升创业质量的意见', no: '人社部发〔2025〕5号' },
-    { file: 'pdf/chuanfufa-2025-20.pdf', title: '四川省人民政府关于进一步深化就业领域改革促进高质量充分就业的实施意见', no: '川府发〔2025〕20号' },
-    { file: 'pdf/chuanbanfa-2025-6.pdf', title: '四川省人民政府办公厅关于印发《支持创业带动就业的若干政策措施》的通知', no: '川办发〔2025〕6号' }
-];
+// 电子书（在线浏览，不提供下载）：每页预先转成图片，放在 books/<id>/ 下
+const ebooks = {
+    wenda: { title: "内江市农民工服务保障工作问答手册（2026 年版）", note: "问答手册全文", pages: ["001.png", "002.png", "003.png", "004.png", "005.png", "006.png", "007.png", "008.png", "009.png", "010.png", "011.png", "012.png", "013.png", "014.png", "015.png", "016.png", "017.png", "018.png", "019.png", "020.png", "021.png", "022.png", "023.png", "024.png", "025.png", "026.png", "027.png", "028.png", "029.png", "030.png", "031.png", "032.png", "033.png", "034.png", "035.png", "036.png", "037.png", "038.png", "039.png", "040.png", "041.png", "042.png", "043.png", "044.png", "045.png", "046.png", "047.png", "048.png", "049.png", "050.png", "051.png", "052.png", "053.png", "054.png", "055.png", "056.png", "057.png", "058.png", "059.png", "060.png", "061.png", "062.png", "063.png", "064.png", "065.png", "066.png", "067.png", "068.png", "069.png", "070.png", "071.png", "072.png", "073.png", "074.png", "075.png", "076.png", "077.png", "078.png", "079.png", "080.png", "081.png", "082.png", "083.png", "084.png", "085.png", "086.png", "087.png", "088.png", "089.png", "090.png", "091.png", "092.png", "093.png", "094.png", "095.png", "096.png", "097.png", "098.png", "099.png", "100.png", "101.png", "102.png", "103.png", "104.png", "105.png", "106.png", "107.png", "108.png", "109.png", "110.png", "111.png", "112.png", "113.png", "114.png", "115.png", "116.png", "117.png"] },
+    huibian: { title: "内江市返乡下乡创业政策汇编（2026 年版）", note: "政策汇编全文", pages: ["001.png", "002.png", "003.png", "004.png", "005.png", "006.png", "007.png", "008.png", "009.png", "010.png", "011.png", "012.png", "013.png", "014.png", "015.png", "016.png", "017.png", "018.png", "019.png", "020.png", "021.png", "022.png", "023.png", "024.png", "025.png", "026.png", "027.png", "028.png", "029.png", "030.png", "031.png", "032.png", "033.png", "034.png", "035.png", "036.png", "037.png", "038.png", "039.png", "040.png", "041.png", "042.png", "043.png", "044.png", "045.png", "046.png", "047.png", "048.png", "049.png", "050.png", "051.png", "052.png", "053.jpg", "054.png", "055.png", "056.png", "057.png", "058.png", "059.png", "060.png", "061.png", "062.png", "063.png", "064.png", "065.png", "066.png", "067.png", "068.png", "069.png", "070.png", "071.png", "072.png", "073.png", "074.png", "075.png", "076.png", "077.png", "078.png", "079.png", "080.png", "081.png", "082.png", "083.png", "084.png", "085.png", "086.jpg", "087.png", "088.png", "089.png", "090.png", "091.png", "092.png", "093.png", "094.png", "095.png", "096.png", "097.png", "098.png", "099.png", "100.png", "101.png", "102.png", "103.jpg", "104.png", "105.png", "106.png", "107.png", "108.png", "109.png", "110.png", "111.png"] },
+    renshebu: { title: "人力资源社会保障部等7部门关于健全创业支持体系提升创业质量的意见", note: "人社部发〔2025〕5号", pages: ["001.jpg", "002.png", "003.png", "004.png", "005.png", "006.png", "007.png", "008.png"] },
+    chuanfufa: { title: "四川省人民政府关于进一步深化就业领域改革促进高质量充分就业的实施意见", note: "川府发〔2025〕20号", pages: ["001.png", "002.png", "003.png", "004.png", "005.png", "006.png", "007.png", "008.png", "009.png"] },
+    chuanbanfa: { title: "四川省人民政府办公厅关于印发《支持创业带动就业的若干政策措施》的通知", note: "川办规〔2025〕6号", pages: ["001.jpg", "002.png", "003.png", "004.png", "005.png", "006.png", "007.png", "008.png"] },
+};
+const policyDocIds = ['renshebu', 'chuanfufa', 'chuanbanfa'];
 
 // 政策汇编列表数据
 const collectionItems = [
@@ -3936,6 +3937,8 @@ const app = document.getElementById('app');
 // 路由处理函数
 function render() {
     const hash = window.location.hash || '#/home';
+    window.__prevHash = window.__curHash;
+    window.__curHash = hash;
     const [path, ...params] = hash.slice(2).split('/');
 
     app.innerHTML = '';
@@ -3958,6 +3961,9 @@ function render() {
     } else if (path === 'collection') {
         document.body.classList.add('has-inner-page');
         renderCollectionList();
+    } else if (path === 'book') {
+        document.body.classList.remove('has-inner-page');
+        renderBook(params[0]);
     } else if (path === 'collection-detail') {
         document.body.classList.remove('has-inner-page');
         const docId = params[0];
@@ -3983,7 +3989,6 @@ function renderHome() {
             <main class="g-main">
                 <section class="g-frame">
                     <svg class="g-corner g-tl" viewBox="0 0 26 26" aria-hidden="true"><path d="M1 25V1h24M6 25V6h19M11 25V11h14" fill="none" stroke="currentColor" stroke-width="2"/></svg><svg class="g-corner g-tr" viewBox="0 0 26 26" aria-hidden="true"><path d="M1 25V1h24M6 25V6h19M11 25V11h14" fill="none" stroke="currentColor" stroke-width="2"/></svg><svg class="g-corner g-bl" viewBox="0 0 26 26" aria-hidden="true"><path d="M1 25V1h24M6 25V6h19M11 25V11h14" fill="none" stroke="currentColor" stroke-width="2"/></svg><svg class="g-corner g-br" viewBox="0 0 26 26" aria-hidden="true"><path d="M1 25V1h24M6 25V6h19M11 25V11h14" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-                    <h1 class="g-ttl">便民服务</h1>
                     <nav class="g-grid">
                     <a href="#/qa/employment" class="g-item" data-cat="job"><span class="g-seal"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2" class="fill"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/><path d="M11 13v2h2v-2"/></svg></span><b>就业服务</b></a>
                     <a href="#/qa/social-security" class="g-item" data-cat="ss"><span class="g-seal"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z" class="fill"/><path d="M12 9v6M9 12h6"/></svg></span><b>社保医保</b></a>
@@ -3997,8 +4002,8 @@ function renderHome() {
                     </nav>
                 </section>
                 <div class="g-dl">
-                    <a href="pdf/2026-wenda-shouce.pdf" target="_blank" rel="noopener"><span class="pdf-link-tag">PDF</span>问答手册全文</a>
-                    <a href="pdf/2026-chuangye-huibian.pdf" target="_blank" rel="noopener"><span class="pdf-link-tag">PDF</span>政策汇编全文</a>
+                    <a href="#/book/wenda"><span class="pdf-link-tag">电子书</span>问答手册全文</a>
+                    <a href="#/book/huibian"><span class="pdf-link-tag">电子书</span>政策汇编全文</a>
                 </div>
             </main>
             <footer class="g-foot" aria-label="内江市民生工作领导小组农民工工作专项工作组 宣　内江市农民工服务中心 编"></footer>
@@ -4055,6 +4060,26 @@ function subHeader(title, backHash) {
 function listCard(href, number, text) {
     return `<a href="${href}" class="sp-card"><span class="sp-num">${number}</span><span class="sp-card-text">${escapeHtml(text)}</span><span class="sp-chev">›</span></a>`;
 }
+// 全站搜索：同时搜索全部政策问答和政策汇编，本类的结果排在前面
+function siteSearch(kw, firstCategoryId) {
+    const k = kw.trim().toLowerCase();
+    if (!k) return [];
+    const catName = id => (qaCategories.find(c => c.id === id) || {}).name || '';
+    const qa = qaItems
+        .filter(q => q.question.toLowerCase().includes(k) || q.answer.toLowerCase().includes(k))
+        .map(q => ({ href: `#/qa-detail/${q.id}`, text: q.question, tag: catName(q.categoryId), first: q.categoryId === firstCategoryId, inTitle: q.question.toLowerCase().includes(k) }));
+    const docs = collectionItems
+        .filter(d => d.title.toLowerCase().includes(k) || d.content.toLowerCase().includes(k))
+        .map(d => ({ href: `#/collection-detail/${d.id}`, text: d.title, tag: '政策汇编', first: firstCategoryId === 'collection', inTitle: d.title.toLowerCase().includes(k) }));
+    return qa.concat(docs).sort((a, b) => (b.first - a.first) || (b.inTitle - a.inTitle));
+}
+function renderSearchResults(kw, firstCategoryId) {
+    const found = siteSearch(kw, firstCategoryId);
+    if (!found.length) return '<p class="sp-empty">全站没有找到相关内容，换个词试试。</p>';
+    return `<p class="sp-result-count">全站找到 ${found.length} 条</p>` + found.map((r, i) =>
+        `<a href="${r.href}" class="sp-card"><span class="sp-num">${i + 1}</span><span class="sp-card-text">${escapeHtml(r.text)}<small class="sp-tag">${escapeHtml(r.tag)}</small></span><span class="sp-chev">›</span></a>`
+    ).join('');
+}
 function bindSearch(fn) {
     document.getElementById('search-input').addEventListener('keypress', function(e) {
         if (e.key === 'Enter') fn();
@@ -4077,7 +4102,7 @@ function renderQAList(categoryId) {
                 <h1>${escapeHtml(category.name)}</h1>
                 <p>共 ${items.length} 条问答</p>
                 <div class="sp-search">
-                    <input type="search" id="search-input" placeholder="搜索本类问答" enterkeyhint="search">
+                    <input type="search" id="search-input" placeholder="搜索全部政策，如“公积金”" enterkeyhint="search">
                     <button type="button" onclick="filterQA()">搜索</button>
                 </div>
             </section>
@@ -4086,9 +4111,8 @@ function renderQAList(categoryId) {
     `;
 
     window.filterQA = function() {
-        const kw = document.getElementById('search-input').value.trim().toLowerCase();
-        const found = items.filter(item => item.question.toLowerCase().includes(kw) || item.answer.toLowerCase().includes(kw));
-        document.getElementById('qa-list').innerHTML = found.length ? cards(found) : '<p class="sp-empty">没有找到相关问答，换个词试试。</p>';
+        const kw = document.getElementById('search-input').value.trim();
+        document.getElementById('qa-list').innerHTML = kw ? renderSearchResults(kw, categoryId) : cards(items);
     };
     bindSearch(window.filterQA);
 }
@@ -4134,15 +4158,15 @@ function renderQADetail(qaId) {
 // ============================================
 function renderCollectionList() {
     const cards = list => list.map((item, i) => listCard(`#/collection-detail/${item.id}`, i + 1, item.title)).join('');
+    const bookLink = id => `<a class="pdf-link" href="#/book/${id}"><span class="pdf-link-tag">电子书</span><span class="pdf-link-text">${escapeHtml(ebooks[id].title)}<small>${escapeHtml(ebooks[id].note === '问答手册全文' || ebooks[id].note === '政策汇编全文' ? '在线阅读，共 ' + ebooks[id].pages.length + ' 页' : ebooks[id].note)}</small></span></a>`;
     const docs = `
                 <div class="policy-docs">
-                    <div class="policy-docs-title">全文下载</div>
-                    <a class="pdf-link" href="pdf/2026-chuangye-huibian.pdf" target="_blank" rel="noopener"><span class="pdf-link-tag">PDF</span><span class="pdf-link-text">内江市返乡下乡创业政策汇编（2026 年版）<small>全书 PDF，约 5 MB</small></span></a>
-                    <a class="pdf-link" href="pdf/2026-wenda-shouce.pdf" target="_blank" rel="noopener"><span class="pdf-link-tag">PDF</span><span class="pdf-link-text">内江市农民工服务保障工作问答手册（2026 年版）<small>全书 PDF，约 2 MB</small></span></a>
+                    <div class="policy-docs-title">全书在线阅读</div>
+                    ${bookLink('huibian')}${bookLink('wenda')}
                 </div>
                 <div class="policy-docs">
                     <div class="policy-docs-title">政策原文</div>
-                    ${policyDocs.map(d => `<a class="pdf-link" href="${d.file}" target="_blank" rel="noopener"><span class="pdf-link-tag">PDF</span><span class="pdf-link-text">${escapeHtml(d.title)}<small>${escapeHtml(d.no)}</small></span></a>`).join('')}
+                    ${policyDocIds.map(bookLink).join('')}
                 </div>`;
 
     app.innerHTML = `
@@ -4150,9 +4174,9 @@ function renderCollectionList() {
             ${subHeader('返乡创业', '#/home')}
             <section class="sp-hero">
                 <h1>返乡下乡创业政策汇编</h1>
-                <p>共 ${collectionItems.length} 项政策　文末可下载全书 PDF 和政策原文</p>
+                <p>共 ${collectionItems.length} 项政策　文末可在线阅读全书和政策原文</p>
                 <div class="sp-search">
-                    <input type="search" id="search-input" placeholder="搜索政策，如“创业补贴”" enterkeyhint="search">
+                    <input type="search" id="search-input" placeholder="搜索全部政策，如“创业补贴”" enterkeyhint="search">
                     <button type="button" onclick="filterCollection()">搜索</button>
                 </div>
             </section>
@@ -4161,10 +4185,8 @@ function renderCollectionList() {
     `;
 
     window.filterCollection = function() {
-        const kw = document.getElementById('search-input').value.trim().toLowerCase();
-        if (!kw) { document.getElementById('collection-list').innerHTML = cards(collectionItems) + docs; return; }
-        const found = collectionItems.filter(item => item.title.toLowerCase().includes(kw) || item.content.toLowerCase().includes(kw));
-        document.getElementById('collection-list').innerHTML = found.length ? cards(found) : '<p class="sp-empty">没有找到相关政策，换个词试试。</p>';
+        const kw = document.getElementById('search-input').value.trim();
+        document.getElementById('collection-list').innerHTML = kw ? renderSearchResults(kw, 'collection') : cards(collectionItems) + docs;
     };
     bindSearch(window.filterCollection);
 }
@@ -4200,6 +4222,44 @@ function renderCollectionDetail(docId) {
             </main>
         </div>
     `;
+}
+
+
+// ============================================
+// 电子书在线阅读（不提供下载）
+// ============================================
+function renderBook(bookId) {
+    const book = ebooks[bookId];
+    if (!book) { renderHome(); return; }
+    const back = window.__prevHash && window.__prevHash.indexOf('#/book/') !== 0 ? window.__prevHash : '#/home';
+    const pages = book.pages.map((f, i) => `
+                <figure class="bk-page" data-n="${i + 1}">
+                    <img src="books/${bookId}/${f}" alt="第 ${i + 1} 页" loading="${i < 2 ? 'eager' : 'lazy'}" draggable="false" width="900" height="1273">
+                    <span class="bk-shield" aria-hidden="true"></span>
+                </figure>`).join('');
+
+    app.innerHTML = `
+        <div class="page sub book">
+            ${subHeader('在线阅读', back)}
+            <section class="sp-doc-head bk-head">
+                <h1>${escapeHtml(book.title)}</h1>
+                <p>共 ${book.pages.length} 页　仅供在线阅读</p>
+            </section>
+            <main class="bk-pages" id="bk-pages">${pages}</main>
+            <div class="bk-counter" id="bk-counter">1 / ${book.pages.length}</div>
+        </div>
+    `;
+
+    const root = document.getElementById('bk-pages');
+    root.addEventListener('contextmenu', e => e.preventDefault());
+    root.addEventListener('dragstart', e => e.preventDefault());
+    const counter = document.getElementById('bk-counter');
+    if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(en => { if (en.isIntersecting) counter.textContent = en.target.dataset.n + ' / ' + book.pages.length; });
+        }, { rootMargin: '-45% 0px -45% 0px' });
+        root.querySelectorAll('.bk-page').forEach(el => io.observe(el));
+    }
 }
 
 // ============================================
